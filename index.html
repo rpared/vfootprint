@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Every vegan makes a difference, calculate your estimated footprint by the time you have been vegan and share it in social media.">
+    <meta name="keywords" content=" vegan footprint, animal metrics, vegan metrics, carbon footprint, veganismn">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="Roger Paredes">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@RogerParedes999">
+    <meta name="twitter:title" content="V Footprint">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Footprint / Estimate your footprint as a vegan!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles/normalize.css" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="navbar-brand">
+                <img src="assets/VFootprint_brand.png" alt="V Footprint brand">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav" id="navbar-ul">
+                  <li >
+                    <a class="menubtn" href="#">Suggested</a>
+                  </li>
+                  <li >
+                    <a class="menubtn" href="#">Español</a>
+                  </li>
+                </ul>
+            </div>
+        </nav>        
+    </header>
+
+    <section id="hero">
+      <div id="hero-banner">
+        <div id="hero-content" >
+            <div>
+              <img id="guy" src="assets/DoubtfulGuy-Banner.png" alt="Doubtful face">
+            </div>
+            <div id="hero-text">
+              <h1 id="h1-banner">Does one vegan make a difference?</h1>
+              <h2 id="h2-banner">Calculate how much you have saved or would save as a vegan and <strong>share it</strong>.</h2>
+            </div>
+
+        </div >
+        <img id="banner-background" src="assets/banner-background.png" alt="Banner with leaves">
+      </div>
+    </section>
+
+    <main>
+      <section id="input-panelcontainer">
+        <div id="input-panel">
+            <div class="input-side" >
+              <p> Your first name: </p>
+              <input maxlength="25" type="text" id="name-field" placeholder="Optional">
+            </div>
+            <div class="input-side" >
+              <p>How long have you been vegan?</p>
+              <div>
+                <label for="dayList">Days:</label>
+                <select name="dayList" id="dayList"></select>
+                <label for="monthList">Months:</label>
+                <select name="monthList" id="monthList"></select>
+                <label for="yearList">Years:</label>
+                <select name="yearList" id="yearList"></select>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="vLabelSection">
+        
+        <div id="vLabel">
+          <p id="vLabelHeader">Until now I have saved:</p>
+          <div id="vLabeltext">
+            <div class="left-col">
+                <img src="assets/cow-icon.png" alt="cow icon">
+                <img src="assets/fish-icon.png" alt="fish icon">
+                <img src="assets/co2-icon.png" alt="CO2 icon">
+                <img src="assets/water-icon.png" alt="water icon">
+                <img src="assets/grain-icon.png" alt="grains icon">
+                <img src="assets/heart-icon.png" alt="heart icon">
+            </div>
+            <div class="right-col">
+                <p><span id="landAnimals">0</span> Land Animals<sup>1</sup> </p>
+                <p><span id="seaAnimals">0</span> lbs. of Sea Animals<sup>2</sup> </p>
+                <p><span id="co2">0</span> lbs. of C0<sub>2</sub><sup>3</sup> </p>
+                <p><span id="water">0</span> lts. of water<sup>3</sup> </p>
+                <p><span id="grains">0</span> lbs. of grains<sup>3</sup> </p>
+                <p><span id="animalSuffering">No</span> Animal Suffering </p>
+            </div>
+          </div>
+          <div id="vLabelPicContainer">
+            <img id="vLabelPic" src="assets/vlabel-pigglet.png" alt="V Footprint Label with a pigglet">
+          </div>
+        </div>
+      </section>
+
+      <section id="sharePanelContainer">
+        <div id="sharePanel">
+          <div>
+            <p>Change background image:</p>
+            <select name="vLabelPicSelect" id="vLabelPicSelect">
+              <option value="pigglet">Pigglet</option>
+              <option value="calf">Calf</option>
+              <option value="leaves">Leaves</option>
+              <option value="bunny">Bunny</option>
+            </select>
+          </div>
+            <p>Share your VFootprint label:</p>
+            <div id="socialMedia">
+                <button type="button" id="instagramBtn"><img src="assets/Instagram.png" alt="Instagram"></button>
+
+                <button type="button" id="facebookBtn"><img src="assets/Facebook.png" alt="Facebook"></button>
+                <button type="button" id="linkedInBtn"><img src="assets/LinkedIn.png" alt="LinkedIn"></button>
+                <button type="button" id="downloadBtn"><img src="assets/Download.png" alt="Download"></button>
+            </div>
+        </div>
+
+      </section>
+
+
+
+
+    </main>
+    <div class="external-links">
+      <p>Check these out:</p> <br>
+      <a href="https://animalkillstats.apocalypsisopus.com" target="_blank"><img src="assets/AnimalKillStats.png" alt="Animal Kill Stats"></a>
+      <a href="https://plantbasedtreaty.org/" target="_blank"><img src="assets/PlantBasedTreaty.png" alt="PlantBasedTreaty"></a>
+      
+    </div>
+
+  <footer>
+    <p>
+      <strong>Sources & Footnotes: </strong><br>
+      <sup>1</sup> Land animals data is dated 2023, estimated at 92.2 billion yearly by: <a href="https://www.humanesociety.org/blog/more-animals-ever-922-billion-are-used-and-killed-each-year-food#:~:text=The%20most%20recent%20data%20about,the%20Food%20and%20Agriculture%20Organization.">https://www.humanesociety.org</a>. Data originally by UN - FAO. <br>
+      <sup>2</sup> Fish and sea animals data is dated 2020, estimated at 213,916,126 tons a year by: <a href="https://ourworldindata.org/grapher/capture-and-aquaculture-production?tab=table&time=latest">https://ourworldindata.org</a>. Fish and seafood production is measured by weight as the sum of seafood from wild catch and fish farming (aquaculture). Data originally by UN - FAO. <br>
+      
+      *Land and sea animal calculations are made dividing by a 2023 World population set 8,045 million by: <a href="https://www.worldometers.info/world-population/#total">https://www.worldometers.info</a>  <br>
+      *Land and sea animal calculations are made dividing by a 2023 World population set 7,841 million by: <a href="https://www.worldometers.info/world-population/#total">https://www.worldometers.info</a> <br>
+      
+      <sup>3</sup> Estimations from <a href="https://www.cowspiracy.com/facts">https://www.cowspiracy.com</a>
+      <em> "Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal's life.   [xiv]"<br>
+      </em><br>
+      <a href="roger.costra.ec">- © Roger Paredes 2024 -</a>
+    </p>
+    
+  </footer>
+  <div id="canvasContainer"></div>
+
+
+</body>
+</html>
