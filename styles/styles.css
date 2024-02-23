@@ -270,7 +270,8 @@ button:focus, button:active {
 /* FOOTER */
 footer p{
     max-width: 800px;
-    margin: 48px 28px;
+    margin: 48px auto;
+    padding: 0 28px;
     text-align: center;
     color: #6D6D6D;
     font-size: 9pt;
