@@ -129,11 +129,20 @@ font-weight: 700;
 }
 
 /* V LABEL */
+#vlabelWrapper{
+    margin: auto;
+    background-color: #D9D9D9;
+    border-radius: 11px;
+    max-width: 552px;
+    padding-top: 4px;
+}
+
 #vLabel{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     position: relative;
-    margin: 16px auto;
-    max-width: fit-content;
+    margin: 8px auto;
+    width: 530px;
+    height: 500px;
 }
 #vLabelHeader{
     position: absolute;
@@ -145,10 +154,10 @@ font-weight: 700;
     left: 6%;
     z-index: 20;
 }
-#vLabel img{
+/* #vLabel img{
     margin: 0 auto;
     z-index: 10;
-}
+} */
 #vLabeltext{
     position: absolute;
     color: #fff;
@@ -187,12 +196,19 @@ sup{
     padding: 0;
     font-size: 9pt;
 }
+#vLabelPicContainer{
+    display: flex;
+    justify-content: center;
+}
+#vLabelPic{
+    max-width: 530px;
+}
 
 /*SHARE PANEL*/
 section#sharePanelContainer{
-    margin: 16px auto;
-    padding: 6px ;
-    max-width: 530px;
+    margin: 0 auto;
+    padding: 0 6px ;
+    max-width: 546px;
     background-color: #D9D9D9;
     border-radius: 11px;
     text-align: center;
@@ -202,9 +218,9 @@ section#sharePanelContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 12px 24px;
-    border: 1px solid #fff;
-    border-radius: 10px;
+    padding: 0 24px 12px 24px;
+    /* border: 1px solid #fff; */
+    /* border-radius: 10px; */
 }
 #sharePanel select{
     display: inline;
@@ -348,15 +364,20 @@ footer sup{
         border: 1px solid black;
         display: flex;
         justify-content: center;
+        max-height: fit-content;
+        max-width: fit-content;
     }
     #vLabel{
-        margin-top: 0px;
+        height: fit-content;
+        max-width: 95%;
     }
     #vLabelHeader{
+        top:8vw;
         font-size: 4vw;
         margin-left: 2vw;
     }
     #vLabeltext{
+        top:20vw;
         font-size: 3.8vw;
         line-height: 7.5vw;
         grid-template-columns: 8vw 1fr;
@@ -389,12 +410,9 @@ footer sup{
         font-size: 2.4vw;
     }
 
-    #vLabelPicContainer{
-        display: flex;
-        justify-content: center;
-    }
+    
     #vLabelPic{
-        max-width: 95%;
+        max-width: 100%;
     }
 
     
