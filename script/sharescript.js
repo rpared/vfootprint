@@ -1,31 +1,4 @@
 const url = "https://rpared.github.io/vfootprint/";
-function launchPupeeteer() {
-  const puppeteer = require("puppeteer");
-
-  (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url);
-
-    // Find the div with the ID "vLabel"
-    const vLabelDiv = await page.waitForSelector("#vLabel");
-
-    const { x, y, width, height } = await vLabelDiv.boundingBox();
-
-    await page.setViewport({
-      width: 700,
-      height: 1000,
-      deviceScaleFactor: 2, // Include deviceScaleFactor here
-    });
-
-    await vLabelDiv.screenshot({
-      path: "vlabels/my-vlabel.png",
-      clip: { x: x, y: y - 2, width: 530, height: 500 }, // Adjust as needed
-      deviceScaleFactor: 2,
-    });
-    await browser.close();
-  })();
-}
 
 $(document).ready(function () {
   const shareInstagram = () => {
@@ -47,7 +20,6 @@ $(document).ready(function () {
   };
 
   //FACEBOOK
-  launchPupeeteer();
   const shareFacebook = (target) => {
     // Replace 'your-image-url' with the URL of the image you want to share
     function screenshotURL(target) {
@@ -111,7 +83,9 @@ $(document).ready(function () {
   };
 
   function downloadScreenshot(target) {
-    html2canvas(target).then((canvas) => {
+    html2canvas(target, {
+      scale: 2, // Double the resolution
+    }).then((canvas) => {
       const base64image = canvas.toDataURL("image/png");
       let anchor = document.createElement("a");
       anchor.setAttribute("href", base64image);
