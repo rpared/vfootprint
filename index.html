@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
     <script src="script/script.js" defer></script>
+    <script src="script/sharescript.js" defer></script>
 </head>
 <body>
     <header>
@@ -87,56 +88,59 @@
         </div>
       </section>
 
-      <section id="vLabelSection">
-        
-        <div id="vLabel">
-          <p id="vLabelHeader">Until now I have saved:</p>
-          <div id="vLabeltext">
-            <div class="left-col">
-                <img src="assets/cow-icon.png" alt="cow icon">
-                <img src="assets/fish-icon.png" alt="fish icon">
-                <img src="assets/co2-icon.png" alt="CO2 icon">
-                <img src="assets/water-icon.png" alt="water icon">
-                <img src="assets/grain-icon.png" alt="grains icon">
-                <img src="assets/heart-icon.png" alt="heart icon">
+    <section id="vlabelWrapper">
+        <section id="vLabelSection">
+          
+          <div id="vLabel">
+            <p id="vLabelHeader">Until now I have saved:</p>
+            <div id="vLabeltext">
+              <div class="left-col">
+                  <img src="assets/cow-icon.png" alt="cow icon">
+                  <img src="assets/fish-icon.png" alt="fish icon">
+                  <img src="assets/co2-icon.png" alt="CO2 icon">
+                  <img src="assets/water-icon.png" alt="water icon">
+                  <img src="assets/grain-icon.png" alt="grains icon">
+                  <img src="assets/heart-icon.png" alt="heart icon">
+              </div>
+              <div class="right-col">
+                  <p><span id="landAnimals">0</span> Land Animals<sup>1</sup> </p>
+                  <p><span id="seaAnimals">0</span> lbs. of Sea Animals<sup>2</sup> </p>
+                  <p><span id="co2">0</span> lbs. of C0<sub>2</sub><sup>3</sup> </p>
+                  <p><span id="water">0</span> lts. of water<sup>3</sup> </p>
+                  <p><span id="grains">0</span> lbs. of grains<sup>3</sup> </p>
+                  <p><span id="animalSuffering">No</span> Animal Suffering </p>
+              </div>
             </div>
-            <div class="right-col">
-                <p><span id="landAnimals">0</span> Land Animals<sup>1</sup> </p>
-                <p><span id="seaAnimals">0</span> lbs. of Sea Animals<sup>2</sup> </p>
-                <p><span id="co2">0</span> lbs. of C0<sub>2</sub><sup>3</sup> </p>
-                <p><span id="water">0</span> lts. of water<sup>3</sup> </p>
-                <p><span id="grains">0</span> lbs. of grains<sup>3</sup> </p>
-                <p><span id="animalSuffering">No</span> Animal Suffering </p>
+            <div id="vLabelPicContainer">
+              <img id="vLabelPic" src="assets/vlabel-pigglet.png" alt="V Footprint Label with a pigglet">
             </div>
           </div>
-          <div id="vLabelPicContainer">
-            <img id="vLabelPic" src="assets/vlabel-pigglet.png" alt="V Footprint Label with a pigglet">
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="sharePanelContainer">
-        <div id="sharePanel">
-          <div>
-            <p>Change background image:</p>
-            <select name="vLabelPicSelect" id="vLabelPicSelect">
-              <option value="pigglet">Pigglet</option>
-              <option value="calf">Calf</option>
-              <option value="leaves">Leaves</option>
-              <option value="bunny">Bunny</option>
-            </select>
-          </div>
-            <p>Share your VFootprint label:</p>
-            <div id="socialMedia">
-                <button type="button" id="instagramBtn"><img src="assets/Instagram.png" alt="Instagram"></button>
-
-                <button type="button" id="facebookBtn"><img src="assets/Facebook.png" alt="Facebook"></button>
-                <button type="button" id="linkedInBtn"><img src="assets/LinkedIn.png" alt="LinkedIn"></button>
-                <button type="button" id="downloadBtn"><img src="assets/Download.png" alt="Download"></button>
+        <section id="sharePanelContainer">
+          <div id="sharePanel">
+            <div>
+              <p>Change background image:</p>
+              <select name="vLabelPicSelect" id="vLabelPicSelect">
+                <option value="pigglet">Pigglet</option>
+                <option value="calf">Calf</option>
+                <option value="leaves">Leaves</option>
+                <option value="bunny">Bunny</option>
+              </select>
             </div>
-        </div>
+              <p>Share your VFootprint label:</p>
+              <div id="socialMedia">
+                  <button type="button" id="instagramBtn"><img src="assets/Instagram.png" alt="Instagram"></button>
 
-      </section>
+                  <button type="button" id="facebookBtn"><img src="assets/Facebook.png" alt="Facebook"></button>
+                  <button type="button" id="linkedInBtn"><img src="assets/LinkedIn.png" alt="LinkedIn"></button>
+                  <button type="button" id="downloadBtn"><img src="assets/Download.png" alt="Download"></button>
+              </div>
+          </div>
+
+        </section>
+
+    </section>
 
 
 
