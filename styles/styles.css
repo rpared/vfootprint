@@ -67,28 +67,19 @@ a.menubtn:hover{
 #h2-banner{
     font-size: 2em;
     color: #000000;
-    text-shadow: 0px 0px 6px #ffffff8c;
+    text-shadow: 0px 0px 6px #d8f2d1b0;
 }
 #guy{
     z-index: 1;
 }
-
 #banner-background-container{
     display: flex;
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
+    /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5) inset; */
 }
 
-/* img.inset-shadow:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 10px 10px 5px rgba(0, 0, 0, 0.5);
-  } */
 
 /* INPUT PANEL */
 #input-panelcontainer{
@@ -290,9 +281,12 @@ button:focus, button:active {
 } */
 
 /* FOOTER */
-footer p{
+footer{
+    margin-top: 40px;
+}
+footer div{
     max-width: 800px;
-    margin: 48px auto;
+    margin: 0 auto 10px;
     padding: 0 28px;
     text-align: center;
     color: #6D6D6D;
@@ -308,6 +302,22 @@ a{
 a:hover{
     color:#7EB85A;
 }
+footer li, footer ul{
+    list-style: none;
+    padding: 0;
+}
+footer button{
+    color: #6D6D6D;
+    display: block;
+    margin: -10px auto;
+}
+hr{
+    margin: 20px;
+}
+#attributions{
+    margin-top: 10px;
+    display: none;
+}
 
 
 @media screen and (max-width: 1000px){
@@ -315,7 +325,7 @@ a:hover{
         font-size: 2.6em;
     }
     #guy{
-        margin-left: -18%;
+        margin-left: -15%;
     }
     #hero-text{
         margin-left: -20%;
@@ -350,6 +360,7 @@ a:hover{
     }
     #guy{
         max-height: 210px;
+        margin-left: -10%;
     }
     #input-panel{
         flex-direction: column;
