@@ -125,7 +125,7 @@ $(document).ready(function () {
     }
   };
 
-  //BACKGROUND IMAGE CHANGE
+  // BACKGROUND IMAGE CHANGE
   let changePic = () => {
     if ($("#vLabelPicSelect").val() === "calf") {
       $("#vLabelPic").attr("src", "assets/vlabel-calf.png");
@@ -142,10 +142,20 @@ $(document).ready(function () {
     }
   };
 
+  // IMAGE ATTRIBUTIONS
+  let toggleAttributions = () => {
+    $("#attributions").toggle("style", "display: inline");
+    const buttonText = $("#attributions").is(":visible")
+      ? "<strong>Image Attribution ↑</strong>"
+      : "<strong>Image Attribution ↓</strong>";
+    $("footer button").html(buttonText);
+  };
+
   // EVENT LISTENERS
   $("#name-field").on("change", addFirstName);
   $("#dayList").on("change", calculateVFootprint);
   $("#monthList").on("change", calculateVFootprint);
   $("#yearList").on("change", calculateVFootprint);
   $("#vLabelPicSelect").on("change", changePic);
+  $("footer button").on("click", toggleAttributions);
 });

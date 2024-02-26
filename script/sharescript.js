@@ -92,6 +92,14 @@ $(document).ready(function () {
       anchor.setAttribute("download", "my-vfootprint.png");
       anchor.click();
       anchor.remove();
+
+      alert(
+        `The photo will be stored in your Downloaded Files.
+If on mobile: 
+    1. Navigate to the Files app and locate photo. 
+    2. Share directly or use the "Save Image" or "Move"
+       options to add image to the Camera Roll.`
+      );
     });
   }
 
