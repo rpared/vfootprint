@@ -133,6 +133,10 @@ $(document).ready(function () {
       $("#vLabelPic").attr("src", "assets/vlabel-leaves.png");
     } else if ($("#vLabelPicSelect").val() === "bunny") {
       $("#vLabelPic").attr("src", "assets/vlabel-bunny.png");
+    } else if ($("#vLabelPicSelect").val() === "chick") {
+      $("#vLabelPic").attr("src", "assets/vlabel-chick.png");
+    } else if ($("#vLabelPicSelect").val() === "fish") {
+      $("#vLabelPic").attr("src", "assets/vlabel-fish.png");
     } else if ($("#vLabelPicSelect").val() === "pigglet") {
       $("#vLabelPic").attr("src", "assets/vlabel-pigglet.png");
     }
