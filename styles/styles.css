@@ -193,6 +193,17 @@ sup{
     padding: 0;
     font-size: 9pt;
 }
+#vLabelFooter{
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18pt;
+    line-height: 22pt;
+    text-shadow: 2px 2px 6px #000, 0 0 4px #000;
+    top: 83%;
+    left: 9%;
+    z-index: 20;
+}
 #vLabelPicContainer{
     display: flex;
     justify-content: center;
@@ -255,6 +266,13 @@ button:active{
 }
 button:focus, button:active {
     outline: none !important;
+}
+#downloadBtn{
+    margin-top: -5px;
+    padding: 12px 8px 2px;
+    border: 1px solid #6d6d6dac;
+    border-radius: 60px;
+    box-shadow: 0px 0px 4px #fff inset, 0px 0px 4px #ffffff86;
 }
 
 /*EXTERNAL LINKS*/
@@ -406,6 +424,13 @@ hr{
         top:8vw;
         font-size: 4vw;
         margin-left: 2vw;
+    }
+    #vLabelFooter{
+
+        font-size: 4.2vw;
+        line-height: 5vw;
+        top: 83%;
+        /* margin-left: 2vw; */
     }
     #vLabeltext{
         top:20vw;
