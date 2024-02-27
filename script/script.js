@@ -1,3 +1,5 @@
+import { engTranslation, spaTranslation } from "./translations.js";
+
 $(document).ready(function () {
   function populateDays() {
     const select = document.getElementById("dayList");
@@ -51,11 +53,21 @@ $(document).ready(function () {
   let vLabelHeader = document.querySelector("#vLabelHeader");
 
   const addFirstName = () => {
-    if ($("#name-field").val()) {
-      vLabelHeader.innerHTML =
-        "Until now " + $("#name-field").val() + " has saved:";
-    } else {
-      vLabelHeader.innerHTML = "Until now I have saved:";
+    if (!spanish) {
+      if ($("#name-field").val()) {
+        vLabelHeader.innerHTML =
+          "Until now " + $("#name-field").val() + " has saved:";
+      } else {
+        vLabelHeader.innerHTML = "Until now I have saved:";
+      }
+    }
+    if (spanish) {
+      if ($("#name-field").val()) {
+        vLabelHeader.innerHTML =
+          "Hasta hoy " + $("#name-field").val() + " ha ahorrado:";
+      } else {
+        vLabelHeader.innerHTML = "Hasta hoy he ahorrado:";
+      }
     }
   };
 
@@ -63,8 +75,9 @@ $(document).ready(function () {
     console.log($("#dayList"));
     console.log(vLabelHeader);
     addFirstName();
-
+    //Text For just one day Vegan:
     if (
+      !spanish &&
       $("#name-field").val() &&
       $("#dayList").val() == 1 &&
       $("#monthList").val() == 0 &&
@@ -80,6 +93,25 @@ $(document).ready(function () {
         $("#yearList").val() == 0)
     ) {
       vLabelHeader.innerHTML = "Every day I save:";
+    }
+
+    if (
+      spanish &&
+      $("#name-field").val() &&
+      $("#dayList").val() == 1 &&
+      $("#monthList").val() == 0 &&
+      $("#yearList").val() == 0
+    ) {
+      vLabelHeader.innerHTML =
+        "Cada día " + $("#name-field").val() + " ahorra:";
+    } else if (
+      $("#name-field").val() === null ||
+      ($("#name-field").val() === "" &&
+        $("#dayList").val() == 1 &&
+        $("#monthList").val() == 0 &&
+        $("#yearList").val() == 0)
+    ) {
+      vLabelHeader.innerHTML = "Cada día ahorro:";
     }
 
     let landAnimals =
@@ -127,31 +159,60 @@ $(document).ready(function () {
 
   // BACKGROUND IMAGE CHANGE
   let changePic = () => {
-    if ($("#vLabelPicSelect").val() === "calf") {
-      $("#vLabelPic").attr("src", "assets/vlabel-calf.png");
-    } else if ($("#vLabelPicSelect").val() === "leaves") {
-      $("#vLabelPic").attr("src", "assets/vlabel-leaves.png");
-    } else if ($("#vLabelPicSelect").val() === "bunny") {
-      $("#vLabelPic").attr("src", "assets/vlabel-bunny.png");
-    } else if ($("#vLabelPicSelect").val() === "chick") {
-      $("#vLabelPic").attr("src", "assets/vlabel-chick.png");
-    } else if ($("#vLabelPicSelect").val() === "fish") {
-      $("#vLabelPic").attr("src", "assets/vlabel-fish.png");
-    } else if ($("#vLabelPicSelect").val() === "pigglet") {
-      $("#vLabelPic").attr("src", "assets/vlabel-pigglet.png");
+    if (!spanish) {
+      if ($("#vLabelPicSelect").val() === "calf") {
+        $("#vLabelPic").attr("src", "assets/vlabel-calf.png");
+      } else if ($("#vLabelPicSelect").val() === "leaves") {
+        $("#vLabelPic").attr("src", "assets/vlabel-leaves.png");
+      } else if ($("#vLabelPicSelect").val() === "bunny") {
+        $("#vLabelPic").attr("src", "assets/vlabel-bunny.png");
+      } else if ($("#vLabelPicSelect").val() === "chick") {
+        $("#vLabelPic").attr("src", "assets/vlabel-chick.png");
+      } else if ($("#vLabelPicSelect").val() === "fish") {
+        $("#vLabelPic").attr("src", "assets/vlabel-fish.png");
+      } else if ($("#vLabelPicSelect").val() === "pigglet") {
+        $("#vLabelPic").attr("src", "assets/vlabel-pigglet.png");
+      }
     }
   };
 
   // IMAGE ATTRIBUTIONS
   let toggleAttributions = () => {
-    $("#attributions").toggle("style", "display: inline");
-    const buttonText = $("#attributions").is(":visible")
-      ? "<strong>Image Attribution ↑</strong>"
-      : "<strong>Image Attribution ↓</strong>";
-    $("footer button").html(buttonText);
+    if (!spanish) {
+      $("#attributions").toggle("style", "display: inline");
+      const buttonText = $("#attributions").is(":visible")
+        ? "<strong>Image Attribution ↑</strong>"
+        : "<strong>Image Attribution ↓</strong>";
+      $("footer button").html(buttonText);
+    }
+    if (spanish) {
+      $("#attributions").toggle("style", "display: inline");
+      const buttonText = $("#attributions").is(":visible")
+        ? "<strong>Atribución de Imágenes ↑</strong>"
+        : "<strong>Atribución de Imágenes ↓</strong>";
+      $("footer button").html(buttonText);
+    }
+  };
+
+  // ESPAÑOL - ENGLISH
+  let spanish = false;
+  let toggleSpanish = () => {
+    if (spanish == false) {
+      spanish = true;
+    } else {
+      spanish = false;
+    }
+
+    if (spanish) {
+      spaTranslation();
+    }
+    if (spanish == false) {
+      engTranslation();
+    }
   };
 
   // EVENT LISTENERS
+  $(".menubtn:eq(1)").on("click", toggleSpanish);
   $("#name-field").on("change", addFirstName);
   $("#dayList").on("change", calculateVFootprint);
   $("#monthList").on("change", calculateVFootprint);
