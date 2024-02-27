@@ -25,7 +25,8 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
-    <script src="script/script.js" defer></script>
+    <script type="module" src="script/script.js" ></script>
+    <script type="module" src="script/translations.js"></script>
     <script src="script/sharescript.js" defer></script>
 </head>
 <body>
@@ -106,13 +107,14 @@
               </div>
               <div class="right-col">
                   <p><span id="landAnimals">0</span> Land Animals<sup>1</sup> </p>
-                  <p><span id="seaAnimals">0</span> lbs. of Sea Animals<sup>2</sup> </p>
-                  <p><span id="co2">0</span> lbs. of C0<sub>2</sub><sup>3</sup> </p>
-                  <p><span id="water">0</span> lts. of water<sup>3</sup> </p>
-                  <p><span id="grains">0</span> lbs. of grains<sup>3</sup> </p>
+                  <p><span id="seaAnimals">0</span> Lbs. of Sea Animals<sup>2</sup> </p>
+                  <p><span id="co2">0</span> Lbs. of C0<sub>2</sub><sup>3</sup> </p>
+                  <p><span id="water">0</span> Lts. of water<sup>3</sup> </p>
+                  <p><span id="grains">0</span> Lbs. of grains<sup>3</sup> </p>
                   <p><span id="animalSuffering">No</span> Animal Suffering </p>
               </div>
             </div>
+            <p id="vLabelFooter">Every <span style="color: #7EB85A;">vegan</span> makes <br> a difference!</p>
             <div id="vLabelPicContainer">
               <img id="vLabelPic" src="assets/vlabel-pigglet.png" alt="V Footprint Label with a pigglet">
             </div>
@@ -172,6 +174,8 @@
       <em> "Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal's life.   [xiv]"<br>
       </em>
       <hr>
+      </div>
+      <div>
        <button><strong>Image Attribution ↓</strong></button>
         <ul id="attributions">
           <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/">Photo</a> by SHVETS</li>
