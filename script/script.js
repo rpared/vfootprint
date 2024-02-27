@@ -203,9 +203,17 @@ $(document).ready(function () {
 
     if (spanish) {
       spaTranslation();
+      $("#name-field").val(null);
+      $("#dayList").val(0);
+      $("#monthList").val(0);
+      $("#yearList").val(0);
     }
     if (spanish == false) {
       engTranslation();
+      $("#name-field").val(null);
+      $("#dayList").val(0);
+      $("#monthList").val(0);
+      $("#yearList").val(0);
     }
   };
 

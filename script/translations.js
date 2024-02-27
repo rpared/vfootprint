@@ -59,7 +59,7 @@ let engFooter = `<strong>Sources & Footnotes: </strong><br>
       *Land animal calculations are made dividing by a 2023 World population set at 8,045 million by: <a href="https://www.worldometers.info/world-population/#total" target="_blank">https://www.worldometers.info</a>  <br>
       *Sea animal calculations are made dividing by a 2020 World population set at 7,841 million by: <a href="https://www.worldometers.info/world-population/#total" target="_blank">https://www.worldometers.info</a> <br>
       *Calculations are estimates, averaging up world consumption which is skewed in different countries. 
-      
+      <br>
       <sup>3</sup> Estimations from: <a href="https://www.cowspiracy.com/facts" target="_blank">https://www.cowspiracy.com</a>
       <em> "Each day, a person who eats a vegan diet saves 1,100 gallons of water, 45 pounds of grain, 30 sq ft of forested land, 20 lbs CO2 equivalent, and one animal's life.   [xiv]"<br>
       </em>
@@ -137,7 +137,7 @@ let spaFooter = `
       *Los cálculos de animales terrestres se realizan dividiendo por una población mundial establecida en 2023 en 8.045 millones por: <a href="https://www.worldometers.info/world-population/#total" target="_blank">https://www.worldometers.info</a>  <br>
       *Los cálculos de animales marinos se realizan dividiendo por una población mundial establecida en 2020 en 7.841 millones por: <a href="https://www.worldometers.info/world-population/#total" target="_blank">https://www.worldometers.info</a> <br>
       *Los cálculos son estimaciones, promediando el consumo mundial que está sesgado en diferentes países. 
-      
+      <br>
       <sup>3</sup> Estimaciones de: <a href="https://www.cowspiracy.com/facts" target="_blank">https://www.cowspiracy.com</a>
       <em> "Cada día, una persona que lleva una dieta vegana ahorra 1,100 galones de agua, 45 libras de grano, 30 pies cuadrados de tierra forestal, 20 libras de equivalente de CO2 y la vida de un animal. [xiv].   [xiv]"<br>
       </em>
