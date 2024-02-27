@@ -36,6 +36,9 @@ let engTranslation = () => {
   $("#vLabeltext p:eq(5)").html(
     `<span id="animalSuffering">No</span> Animal Suffering`
   );
+  $("#vLabelFooter").html(
+    `Every <span style="color: #7EB85A;">vegan</span> makes <br> a difference!`
+  );
   $("#sharePanel p:eq(0)").text("Change background image:");
   $("#vLabelPicSelect option:eq(0)").text("Pigglet");
   $("#vLabelPicSelect option:eq(1)").text("Calf");
@@ -108,6 +111,10 @@ let spaTranslation = () => {
   $("#vLabeltext p:eq(5)").html(
     `<span id="animalSuffering">0</span> Sufrimiento animal`
   );
+  $("#vLabelFooter").html(
+    `¡Cada <span style="color: #7EB85A;">vegan@</span> hace <br> la diferencia!`
+  );
+
   $("#sharePanel p:eq(0)").text("Cambia la imagen de fondo:");
   $("#vLabelPicSelect option:eq(0)").text("Cerdito");
   $("#vLabelPicSelect option:eq(1)").text("Ternero");

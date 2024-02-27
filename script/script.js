@@ -159,20 +159,18 @@ $(document).ready(function () {
 
   // BACKGROUND IMAGE CHANGE
   let changePic = () => {
-    if (!spanish) {
-      if ($("#vLabelPicSelect").val() === "calf") {
-        $("#vLabelPic").attr("src", "assets/vlabel-calf.png");
-      } else if ($("#vLabelPicSelect").val() === "leaves") {
-        $("#vLabelPic").attr("src", "assets/vlabel-leaves.png");
-      } else if ($("#vLabelPicSelect").val() === "bunny") {
-        $("#vLabelPic").attr("src", "assets/vlabel-bunny.png");
-      } else if ($("#vLabelPicSelect").val() === "chick") {
-        $("#vLabelPic").attr("src", "assets/vlabel-chick.png");
-      } else if ($("#vLabelPicSelect").val() === "fish") {
-        $("#vLabelPic").attr("src", "assets/vlabel-fish.png");
-      } else if ($("#vLabelPicSelect").val() === "pigglet") {
-        $("#vLabelPic").attr("src", "assets/vlabel-pigglet.png");
-      }
+    if ($("#vLabelPicSelect").val() === "calf") {
+      $("#vLabelPic").attr("src", "assets/vlabel-calf.png");
+    } else if ($("#vLabelPicSelect").val() === "leaves") {
+      $("#vLabelPic").attr("src", "assets/vlabel-leaves.png");
+    } else if ($("#vLabelPicSelect").val() === "bunny") {
+      $("#vLabelPic").attr("src", "assets/vlabel-bunny.png");
+    } else if ($("#vLabelPicSelect").val() === "chick") {
+      $("#vLabelPic").attr("src", "assets/vlabel-chick.png");
+    } else if ($("#vLabelPicSelect").val() === "fish") {
+      $("#vLabelPic").attr("src", "assets/vlabel-fish.png");
+    } else if ($("#vLabelPicSelect").val() === "pigglet") {
+      $("#vLabelPic").attr("src", "assets/vlabel-pigglet.png");
     }
   };
 
