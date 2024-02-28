@@ -1,76 +1,79 @@
 const url = "https://rpared.github.io/vfootprint/";
 
 $(document).ready(function () {
-  const shareInstagram = () => {
-    // Replace 'your-image-url' with the URL of the image you want to share
-    var imageUrl = $("#vLabelBckgrnd");
+  //Attempts to share the image directly in social media, it seems node.js is required to share a dnamically created image
+  //which implies a cloud server
 
-    // Replace 'your-caption' with the desired caption for the image
-    var caption = "We all can make a difference!";
+  // const shareInstagram = () => {
+  //   // Replace 'your-image-url' with the URL of the image you want to share
+  //   var imageUrl = $("#vLabelBckgrnd");
 
-    // Construct the Instagram share URL
-    var instagramUrl =
-      "https://www.instagram.com/share?url=" +
-      encodeURIComponent(imageUrl) +
-      "&caption=" +
-      encodeURIComponent(caption);
+  //   // Replace 'your-caption' with the desired caption for the image
+  //   var caption = "We all can make a difference!";
 
-    // Open a new window or redirect the current window to the Instagram share URL
-    window.open(instagramUrl, "_blank");
-  };
+  //   // Construct the Instagram share URL
+  //   var instagramUrl =
+  //     "https://www.instagram.com/share?url=" +
+  //     encodeURIComponent(imageUrl) +
+  //     "&caption=" +
+  //     encodeURIComponent(caption);
 
-  //FACEBOOK
-  const shareFacebook = (target) => {
-    // Replace 'your-image-url' with the URL of the image you want to share
-    function screenshotURL(target) {
-      html2canvas(target).then((canvas) => {
-        const base64image = canvas.toDataURL("image/png");
-        const img = new Image();
-        img.src = base64image;
-        console.log("Screenshot URL:", img.src);
-        return img.src; // Return the base64 encoded image data
-      });
-    }
-    console.log(screenshotURL(vLabelDiv));
-    let imageUrl = url + "vlabels/my-vlabel.png";
-    // "https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png";
+  //   // Open a new window or redirect the current window to the Instagram share URL
+  //   window.open(instagramUrl, "_blank");
+  // };
 
-    // Replace 'your-caption' with the desired caption for the image
-    var caption = "my_vegan_footprint";
+  // //FACEBOOK
+  // const shareFacebook = (target) => {
+  //   // Replace 'your-image-url' with the URL of the image you want to share
+  //   function screenshotURL(target) {
+  //     html2canvas(target).then((canvas) => {
+  //       const base64image = canvas.toDataURL("image/png");
+  //       const img = new Image();
+  //       img.src = base64image;
+  //       console.log("Screenshot URL:", img.src);
+  //       return img.src; // Return the base64 encoded image data
+  //     });
+  //   }
+  //   console.log(screenshotURL(vLabelDiv));
+  //   let imageUrl = url + "vlabels/my-vlabel.png";
+  //   // "https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png";
 
-    // Construct the Facebook share URL
-    var facebookUrl = "https://www.facebook.com/share.php?u=" + imageUrl;
+  //   // Replace 'your-caption' with the desired caption for the image
+  //   var caption = "my_vegan_footprint";
 
-    // Open a new window or redirect the current window to the Facebook share URL
-    window.open(facebookUrl, "_blank");
-  };
+  //   // Construct the Facebook share URL
+  //   var facebookUrl = "https://www.facebook.com/share.php?u=" + imageUrl;
 
-  //LINKEDIN
-  const shareLinkedIn = (target) => {
-    // Replace 'your-image-url' with the URL of the image you want to share
-    function screenshotURL(target) {
-      html2canvas(target).then((canvas) => {
-        const base64image = canvas.toDataURL("image/png");
-        const img = new Image();
-        img.src = base64image;
-        console.log("Screenshot URL:", img.src);
-        return img.src; // Return the base64 encoded image data
-      });
-    }
+  //   // Open a new window or redirect the current window to the Facebook share URL
+  //   window.open(facebookUrl, "_blank");
+  // };
 
-    let imageUrl = screenshotURL(vLabelDiv);
+  // //LINKEDIN
+  // const shareLinkedIn = (target) => {
+  //   // Replace 'your-image-url' with the URL of the image you want to share
+  //   function screenshotURL(target) {
+  //     html2canvas(target).then((canvas) => {
+  //       const base64image = canvas.toDataURL("image/png");
+  //       const img = new Image();
+  //       img.src = base64image;
+  //       console.log("Screenshot URL:", img.src);
+  //       return img.src; // Return the base64 encoded image data
+  //     });
+  //   }
 
-    // Replace 'your-caption' with the desired caption for the image
-    var caption = "my_vegan_footprint";
+  //   let imageUrl = screenshotURL(vLabelDiv);
 
-    // Construct the LinkedIn share URL
-    var linkedInUrl =
-      "https://www.linkedin.com/sharing/share-offsite/?url=" +
-      encodeURIComponent(imageUrl);
+  //   // Replace 'your-caption' with the desired caption for the image
+  //   var caption = "my_vegan_footprint";
 
-    // Open a new window or redirect the current window to the LinkedIn share URL
-    window.open(linkedInUrl, "_blank");
-  };
+  //   // Construct the LinkedIn share URL
+  //   var linkedInUrl =
+  //     "https://www.linkedin.com/sharing/share-offsite/?url=" +
+  //     encodeURIComponent(imageUrl);
+
+  //   // Open a new window or redirect the current window to the LinkedIn share URL
+  //   window.open(linkedInUrl, "_blank");
+  // };
 
   // SCREEN CAPTURE
   const vLabelDiv = document.querySelector("#vLabel");
@@ -94,27 +97,24 @@ $(document).ready(function () {
       anchor.remove();
 
       alert(
-        `The photo will be stored in your Downloaded Files.
-If on mobile: 
-    1. Navigate to the Files app and locate photo. 
-    2. Share directly or use the "Save Image" or "Move"
-       options to add image to the Camera Roll.`
+        `The photo will be stored in your Downloads Folder.
+On mobile find it with the Files app.`
       );
     });
   }
 
   // EVENT LISTENERS
 
-  $("#instagramBtn").on("click", function () {
-    getScreenshotOfElement(vLabelDiv);
-  });
   $("#downloadBtn").on("click", function () {
     downloadScreenshot(vLabelDiv);
   });
-  $("#facebookBtn").on("click", function () {
-    shareFacebook(vLabelDiv);
-  });
-  $("#linkedInBtn").on("click", function () {
-    shareLinkedIn(vLabelDiv);
-  });
+  // $("#instagramBtn").on("click", function () {
+  //   getScreenshotOfElement(vLabelDiv);
+  // });
+  // $("#facebookBtn").on("click", function () {
+  //   shareFacebook(vLabelDiv);
+  // });
+  // $("#linkedInBtn").on("click", function () {
+  //   shareLinkedIn(vLabelDiv);
+  // });
 });
