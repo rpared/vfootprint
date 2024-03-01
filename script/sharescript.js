@@ -78,6 +78,7 @@ $(document).ready(function () {
   // SCREEN CAPTURE
   const vLabelDiv = document.querySelector("#vLabel");
   const canvasContainer = document.querySelector("#canvasContainer");
+  let hasShownPopup = false;
 
   const getScreenshotOfElement = async (element) => {
     const canvas = await html2canvas(element);
@@ -100,6 +101,36 @@ $(document).ready(function () {
         `The photo will be stored in your Downloads Folder.
 On mobile find it with the Files app.`
       );
+
+      if (hasShownPopup == false) {
+        setTimeout(pbtPopup, 1000);
+        function pbtPopup() {
+          console.log("popup triggerred");
+          let pbt = document.createElement("div");
+          pbt.innerHTML = `
+            <div class="pbt-popup-container"><button class="pbt-close-btn">x</button><a href="https://plantbasedtreaty.org/" target="_blanc"><img style="border-radius:16px; box-shadow: 0 0 10px #000" src="assets/PBT_PopUp.gif" alt="Sign the Plant Based Treaty"></a></div>
+          `;
+          pbt.classList.add("pbt-popup");
+          hasShownPopup = true;
+          console.log(hasShownPopup);
+          // Close button functionality
+          pbt
+            .querySelector(".pbt-close-btn")
+            .addEventListener("click", function () {
+              document.body.removeChild(pbt);
+            });
+
+          // Detect all clicks on the document
+          document.addEventListener("click", function (event) {
+            // If user clicks inside the element, do nothing
+            if (event.target.closest(".pbt-popup-container")) return;
+            // If user clicks outside the element, hide it!
+            document.body.removeChild(pbt);
+          });
+
+          document.body.appendChild(pbt); // Append the element to the body
+        }
+      }
     });
   }
 

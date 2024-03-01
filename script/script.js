@@ -64,9 +64,9 @@ $(document).ready(function () {
     if (spanish) {
       if ($("#name-field").val()) {
         vLabelHeader.innerHTML =
-          "Hasta hoy " + $("#name-field").val() + " ha ahorrado:";
+          $("#name-field").val() + " ha salvado/ahorrado:";
       } else {
-        vLabelHeader.innerHTML = "Hasta hoy he ahorrado:";
+        vLabelHeader.innerHTML = "Hasta hoy he salvado/ahorrado:";
       }
     }
   };
@@ -103,7 +103,7 @@ $(document).ready(function () {
       $("#yearList").val() == 0
     ) {
       vLabelHeader.innerHTML =
-        "Cada día " + $("#name-field").val() + " ahorra:";
+        "Cada día " + $("#name-field").val() + " salva/ahorra:";
     } else if (
       $("#name-field").val() === null ||
       ($("#name-field").val() === "" &&
@@ -111,7 +111,7 @@ $(document).ready(function () {
         $("#monthList").val() == 0 &&
         $("#yearList").val() == 0)
     ) {
-      vLabelHeader.innerHTML = "Cada día ahorro:";
+      vLabelHeader.innerHTML = "Cada día salvo/ahorro:";
     }
 
     let landAnimals =
