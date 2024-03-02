@@ -99,50 +99,53 @@ $(document).ready(function () {
         `The photo will be stored in your Downloads Folder.
 On mobile find it with the Files app.`
       );
+    });
+  }
 
-      //PBT PopUp
-      let pbt = document.createElement("div");
-      pbt.innerHTML = `
-            <div class="pbt-popup-container"><button class="pbt-close-btn">x</button><a href="https://plantbasedtreaty.org/" target="_blanc"><img style="border-radius:16px; box-shadow: 0 0 10px #000" src="assets/PBT_PopUp.gif" alt="Sign the Plant Based Treaty"></a></div>
-          `;
-      pbt.classList.add("pbt-popup");
+  //PBT PopUp
+  let pbtPopup = () => {
+    let pbt = document.createElement("div");
+    pbt.innerHTML = `
+              <div class="pbt-popup-container"><button class="pbt-close-btn">x</button><a href="https://plantbasedtreaty.org/" target="_blanc"><img style="border-radius:16px; box-shadow: 0 0 10px #000" src="assets/PBT_PopUp.gif" alt="Sign the Plant Based Treaty"></a></div>
+            `;
+    pbt.classList.add("pbt-popup");
 
-      const imgPBT = pbt.querySelector("img");
-      imgPBT.onload = function () {
-        if (!hasShownPopup) {
-          setTimeout(pbtPopup, 1000);
-        }
-      };
+    const imgPBT = pbt.querySelector("img");
+    imgPBT.onload = function () {
+      if (!hasShownPopup) {
+        setTimeout(pbtDisplayPopup, 1000);
+      }
+    };
 
-      function pbtPopup() {
-        console.log("popup triggerred");
+    function pbtDisplayPopup() {
+      console.log("popup triggerred");
 
-        hasShownPopup = true;
-        console.log(hasShownPopup);
-        // Close button functionality
-        pbt
-          .querySelector(".pbt-close-btn")
-          .addEventListener("click", function () {
-            document.body.removeChild(pbt);
-          });
-
-        // Detect all clicks on the document
-        document.addEventListener("click", function (event) {
-          // If user clicks inside the element, do nothing
-          if (event.target.closest(".pbt-popup-container")) return;
-          // If user clicks outside the element, hide it!
+      hasShownPopup = true;
+      console.log(hasShownPopup);
+      // Close button functionality
+      pbt
+        .querySelector(".pbt-close-btn")
+        .addEventListener("click", function () {
           document.body.removeChild(pbt);
         });
 
-        document.body.appendChild(pbt); // Append the element to the body
-      }
-    });
-  }
+      // Detect all clicks on the document
+      document.addEventListener("click", function (event) {
+        // If user clicks inside the element, do nothing
+        if (event.target.closest(".pbt-popup-container")) return;
+        // If user clicks outside the element, hide it!
+        document.body.removeChild(pbt);
+      });
+
+      document.body.appendChild(pbt); // Append the element to the body
+    }
+  };
 
   // EVENT LISTENERS
 
   $("#downloadBtn").on("click", function () {
     downloadScreenshot(vLabelDiv);
+    pbtPopup();
   });
   // $("#instagramBtn").on("click", function () {
   //   getScreenshotOfElement(vLabelDiv);
