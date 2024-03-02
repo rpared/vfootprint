@@ -1,5 +1,3 @@
-const url = "https://rpared.github.io/vfootprint/";
-
 $(document).ready(function () {
   //Attempts to share the image directly in social media, it seems node.js is required to share a dnamically created image
   //which implies a cloud server
@@ -102,7 +100,7 @@ $(document).ready(function () {
 On mobile find it with the Files app.`
       );
 
-      if (hasShownPopup == false) {
+      if (!hasShownPopup) {
         setTimeout(pbtPopup, 1000);
         function pbtPopup() {
           console.log("popup triggerred");
