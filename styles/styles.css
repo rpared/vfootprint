@@ -351,6 +351,11 @@ hr{
     align-items: center;
     justify-content: center;
     z-index: 100; /* To Ensure it's on top of other elements */
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    user-select: none; /* Standard property */
   }
   .pbt-popup-container{
     position: relative;
