@@ -47,11 +47,17 @@ let engTranslation = () => {
   $("#vLabelPicSelect option:eq(4)").text("Chick");
   $("#vLabelPicSelect option:eq(5)").text("Fish");
   $("#sharePanel p:eq(1)").text("Download a photo your VFootprint:");
+  $(".final-quote").html(engQuote);
   $(".external-links p").text("Check these out:");
   $("footer div:eq(0)").html(engFooter);
   $("footer button").html("<strong>Image Attribution ↓</strong>");
   $("#attributions").html(engAttributions);
 };
+
+let engQuote = `<em>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
+It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "blanc">Plant-Based Treaty</a>."</em><br>
+<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "blanc">Peter Kalmus</a>  <span>Climate Scientist</span>`;
+
 let engFooter = `<strong>Sources & Footnotes: </strong><br>
       <sup>1</sup> Land animals data is dated 2023, estimated at 92.2 billion yearly by: <a href="https://www.humanesociety.org/blog/more-animals-ever-922-billion-are-used-and-killed-each-year-food#:~:text=The%20most%20recent%20data%20about,the%20Food%20and%20Agriculture%20Organization." target="_blank">https://www.humanesociety.org</a>. Data originally by UN - FAO. <br>
       <sup>2</sup> Fish and sea animals data is dated 2020, estimated at 213,916,126 tons a year by: <a href="https://ourworldindata.org/grapher/capture-and-aquaculture-production?tab=table&time=latest" target="_blank">https://ourworldindata.org</a>. Fish and seafood production is measured by weight as the sum of seafood from wild catch and fish farming (aquaculture). Data originally by UN - FAO. <br>
@@ -92,7 +98,7 @@ let spaTranslation = () => {
   $(".input-side label:eq(0)").text("Días");
   $(".input-side label:eq(1)").text("Meses");
   $(".input-side label:eq(2)").text("Años");
-  $("#vLabelHeader").text("Hasta hoy he ahorrado:");
+  $("#vLabelHeader").text("Hasta hoy he salvado/ahorrado:");
   $("#vLabeltext p:eq(0)").html(
     `<span id="landAnimals">0</span> Animales terrestres<sup>1</sup>`
   );
@@ -123,11 +129,15 @@ let spaTranslation = () => {
   $("#vLabelPicSelect option:eq(4)").text("Pollito");
   $("#vLabelPicSelect option:eq(5)").text("Pez");
   $("#sharePanel p:eq(1)").text("Descarga una foto de tu VFootprint:");
+  $(".final-quote").html(spaQuote);
   $(".external-links p").text("Revisa estos proyectos:");
   $("footer div:eq(0)").html(spaFooter);
   $("footer button").html("<strong>Atribución de Imágenes ↓</strong>");
   $("#attributions").html(spaAttributions);
 };
+
+let spaQuote = `<p>"Reducir rápidamente la agricultura animal y cambiar a la humanidad a una <strong>dieta basada en plantas</strong> es una de las mejores, más fáciles y más rápidas cosas que podemos hacer para salvar el planeta... También amortiguará la seguridad alimentaria en una época de aumento de pérdidas de cosechas debido al calentamiento global. El mundo necesita un <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc">Tratado Basado en Plantas</a>."<br>
+<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "_blanc">Peter Kalmus</a>  <span>Científico Climático</span></p>`;
 
 let spaFooter = `
 <strong>Fuentes y Notas al pie: </strong><br>

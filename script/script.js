@@ -71,6 +71,8 @@ $(document).ready(function () {
     }
   };
 
+  let finalquoteShow = false;
+
   let calculateVFootprint = () => {
     console.log($("#dayList"));
     console.log(vLabelHeader);
@@ -145,15 +147,29 @@ $(document).ready(function () {
 
     $("#vLabeltext #grains").text(grains.toFixed());
 
-    // Loading the infinite symbol
+    // Loading the infinite symbol & the footer
     if (
       $("#dayList").val() == 0 &&
       $("#monthList").val() == 0 &&
       $("#yearList").val() == 0
     ) {
       $("#animalSuffering").text("No");
+      $("#vLabelFooter").css("display", "none");
     } else {
       $("#animalSuffering").text("∞");
+      $("#vLabelFooter").css("display", "block");
+    }
+
+    //Final Quote
+
+    if (!finalquoteShow) {
+      let finalQuote = document.createElement("div");
+      finalQuote.innerHTML = `<p>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
+       It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc">Plant-Based Treaty</a>."<br>
+       <a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "_blanc">Peter Kalmus</a>  <span>Climate Scientist</span></p>`;
+      finalQuote.classList.add("final-quote");
+      $("main").append(finalQuote);
+      finalquoteShow = true;
     }
   };
 
