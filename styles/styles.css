@@ -315,6 +315,11 @@ padding: 12px 10vw;
 font-style: italic;
 text-align: center;
 }
+.final-quote p{
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+}
 .final-quote a{
     font-weight: 600;
     margin-bottom: -3px;
@@ -326,12 +331,7 @@ text-align: center;
     font-size: small;
 
 }
-.final-quote p{
-    margin: 0 auto;
-    max-width: 700px;
-    text-align: center;
 
-}
 
 
 /* FOOTER */
