@@ -77,7 +77,11 @@ a.menubtn:hover{
     justify-content: center;
     margin: 0 auto;
     overflow: hidden;
-    /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5) inset; */
+    box-shadow: 0px 0px 5px #000 inset, 0px 2px 2px #000 inset;
+    
+}
+#banner-background-container img{
+    box-shadow: 0px 0px 5px #000 inset, 0px 2px 2px #000 inset;
 }
 
 
@@ -136,6 +140,7 @@ font-weight: 700;
     border-radius: 11px;
     max-width: 552px;
     padding-top: 4px;
+    box-shadow: 0px 0px 10px #00000071;
 }
 
 #vLabel{
@@ -194,6 +199,7 @@ sup{
     font-size: 9pt;
 }
 #vLabelFooter{
+    display: none;
     position: absolute;
     color: #fff;
     font-weight: 700;
@@ -270,9 +276,9 @@ button:focus, button:active {
 #downloadBtn{
     margin-top: -5px;
     padding: 12px 8px 2px;
-    border: 1px solid #6d6d6dac;
+    border: 1px solid #888888ac;
     border-radius: 60px;
-    box-shadow: 0px 0px 4px #fff inset, 0px 0px 4px #ffffff86;
+    box-shadow: 0px 0px 3px #fff inset, 0px 0px 6px #fff inset, 0px 0px 5px #95959585;
 }
 
 /*EXTERNAL LINKS*/
@@ -297,6 +303,36 @@ button:focus, button:active {
 /* #canvasContainer{
     display: none;
 } */
+
+/*Final Quote*/
+.final-quote{
+display: block;
+margin-top: 20px;
+background-color: #555555;
+color: #D9D9D9;
+font-size: large;
+padding: 10px 10vw;
+font-style: italic;
+text-align: center;
+}
+.final-quote a{
+    font-weight: 600;
+    margin-bottom: -3px;
+    padding: 0;
+}
+.final-quote span{
+    display: block;
+    color: #fff;
+    font-size: small;
+
+}
+.final-quote p{
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+
+}
+
 
 /* FOOTER */
 footer{
@@ -366,6 +402,9 @@ hr{
     right: 2px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 0 0 4px 0;
+
     text-align: center;
     font-weight: 600;
     font-size: large;
@@ -376,7 +415,7 @@ hr{
     margin: 8px;
     width: 34px;
     height: 34px;
-    padding: 0;
+    
 }
 
 @media screen and (max-width: 1000px){
