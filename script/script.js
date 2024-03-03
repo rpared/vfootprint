@@ -1,4 +1,9 @@
-import { engTranslation, spaTranslation } from "./translations.js";
+import {
+  engTranslation,
+  spaTranslation,
+  engQuote,
+  spaQuote,
+} from "./translations.js";
 
 $(document).ready(function () {
   function populateDays() {
@@ -164,12 +169,14 @@ $(document).ready(function () {
 
     if (!finalquoteShow) {
       let finalQuote = document.createElement("div");
-      finalQuote.innerHTML = `<p>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
-       It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc">Plant-Based Treaty</a>."<br>
-       <a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "_blanc">Peter Kalmus</a>  <span>Climate Scientist</span></p>`;
+      if (!spanish) {
+        finalQuote.innerHTML = engQuote;
+      } else if (spanish) {
+        finalQuote.innerHTML = spaQuote;
+      }
+      finalquoteShow = true;
       finalQuote.classList.add("final-quote");
       $("main").append(finalQuote);
-      finalquoteShow = true;
     }
   };
 

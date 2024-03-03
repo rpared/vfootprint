@@ -55,7 +55,7 @@ let engTranslation = () => {
 };
 
 let engQuote = `<em>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
-It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "blanc">Plant-Based Treaty</a>."</em><br>
+It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "blanc" style="color:#D9D9D9;" >Plant-Based Treaty</a>."</em><br>
 <a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "blanc">Peter Kalmus</a>  <span>Climate Scientist</span>`;
 
 let engFooter = `<strong>Sources & Footnotes: </strong><br>
@@ -136,8 +136,8 @@ let spaTranslation = () => {
   $("#attributions").html(spaAttributions);
 };
 
-let spaQuote = `<p>"Reducir rápidamente la agricultura animal y cambiar a la humanidad a una <strong>dieta basada en plantas</strong> es una de las mejores, más fáciles y más rápidas cosas que podemos hacer para salvar el planeta... También amortiguará la seguridad alimentaria en una época de aumento de pérdidas de cosechas debido al calentamiento global. El mundo necesita un <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc">Tratado Basado en Plantas</a>."<br>
-<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "_blanc">Peter Kalmus</a>  <span>Científico Climático</span></p>`;
+let spaQuote = `<p>"Reducir rápidamente la agricultura animal y cambiar a la humanidad a una <strong>dieta basada en plantas</strong> es una de las mejores, más fáciles y más rápidas cosas que podemos hacer para salvar el planeta... También amortiguará la seguridad alimentaria en una época de aumento de pérdidas de cosechas debido al calentamiento global. El mundo necesita un <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc" style="color:#D9D9D9;">Tratado Basado en Plantas</a>."<br>
+<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "_blanc"><strong> Peter Kalmus </strong></a>  <span>Científico Climático</span></p>`;
 
 let spaFooter = `
 <strong>Fuentes y Notas al pie: </strong><br>
@@ -166,6 +166,8 @@ let spaAttributions = `
 export {
   spaTranslation,
   engTranslation,
+  spaQuote,
+  engQuote,
   engFooter,
   spaFooter,
   spaAttributions,
