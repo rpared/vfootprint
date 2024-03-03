@@ -152,7 +152,7 @@ $(document).ready(function () {
 
     $("#vLabeltext #grains").text(grains.toFixed());
 
-    // Loading the infinite symbol & the footer
+    // Loading the infinite symbol, Hero section Guy & the footer Quote
     if (
       $("#dayList").val() == 0 &&
       $("#monthList").val() == 0 &&
@@ -160,10 +160,15 @@ $(document).ready(function () {
     ) {
       $("#animalSuffering").text("No");
       $("#vLabelFooter").css("display", "none");
+      $("#guy").attr("src", "assets/DoubtfulGuy2-Banner.png");
     } else {
       $("#animalSuffering").text("∞");
       $("#vLabelFooter").css("display", "block");
+      $("#guy").attr("src", "assets/LovingGuy2-Banner.png");
     }
+
+    //Change Dude on hero section
+    // $("#guy").attr("src", "assets/LovingGuy2-Banner.png");
 
     //Final Quote
 
@@ -230,6 +235,7 @@ $(document).ready(function () {
       $("#dayList").val(0);
       $("#monthList").val(0);
       $("#yearList").val(0);
+      $("#guy").attr("src", "assets/DoubtfulGuy2-Banner.png");
     }
     if (spanish == false) {
       engTranslation();
@@ -237,6 +243,7 @@ $(document).ready(function () {
       $("#dayList").val(0);
       $("#monthList").val(0);
       $("#yearList").val(0);
+      $("#guy").attr("src", "assets/DoubtfulGuy2-Banner.png");
     }
   };
 

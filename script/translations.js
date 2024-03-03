@@ -1,5 +1,5 @@
 let engTranslation = () => {
-  $(".menubtn:eq(0)").text("Suggested");
+  $(".menubtn:eq(0)").text("Suggested📽️");
   $(".menubtn:eq(1)").text("Español");
   $("#h1-banner").text("Does one vegan make a difference?");
   $("#h2-banner").html(
@@ -72,13 +72,14 @@ let engFooter = `<strong>Sources & Footnotes: </strong><br>
       <hr>
       `;
 let engAttributions = `
-          <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/">Photo</a> by SHVETS</li>
-          <li><a href="https://www.pexels.com/photo/piglet-on-brown-grass-4813937/">Photo</a> by Brett Sayles</li>
-          <li><a href="https://www.pexels.com/photo/a-cute-calf-in-the-farmland-8024491/">Photo</a> by Tuğba Altunbaş</li>
-          <li><a href="https://www.pexels.com/photo/close-up-photo-of-a-yellow-chick-on-the-grass-7440694/">Photo</a> by CRIATORIO NEVES</li>
-          <li><a href="https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/">Photo</a> by sohail nachiti</li>
-          <li><a href="https://www.pexels.com/photo/white-rabbit-on-green-grass-4001296/">Photo</a> by Satyabratasm</li>
-          <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/">Photo</a> by Ben Phillips</li>
+          <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/" target = "_blanc">Photo</a> by SHVETS</li>
+          <li><a href="https://www.pexels.com/photo/black-man-covering-mouth-with-heart-on-stick-6974947/" target = "_blanc">Photo</a> by SHVETS</li>
+          <li><a href="https://www.pexels.com/photo/piglet-on-brown-grass-4813937/" target = "_blanc">Photo</a> by Brett Sayles</li>
+          <li><a href="https://www.pexels.com/photo/a-cute-calf-in-the-farmland-8024491/" target = "_blanc">Photo</a> by Tuğba Altunbaş</li>
+          <li><a href="https://www.pexels.com/photo/close-up-photo-of-a-yellow-chick-on-the-grass-7440694/" target = "_blanc">Photo</a> by CRIATORIO NEVES</li>
+          <li><a href="https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/" target = "_blanc">Photo</a> by sohail nachiti</li>
+          <li><a href="https://www.pexels.com/photo/white-rabbit-on-green-grass-4001296/" target = "_blanc">Photo</a> by Satyabratasm</li>
+          <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/" target = "_blanc">Photo</a> by Ben Phillips</li>
         
         </ul>
         <hr>
@@ -86,7 +87,7 @@ let engAttributions = `
       `;
 
 let spaTranslation = () => {
-  $(".menubtn:eq(0)").text("Sugeridos");
+  $(".menubtn:eq(0)").text("📽️Sugeridos");
   $(".menubtn:eq(1)").text("English");
   $("#h1-banner").text("Hace diferencia un individuo vegano?");
   $("#h2-banner").html(
@@ -154,13 +155,14 @@ let spaFooter = `
       <hr>
       `;
 let spaAttributions = `
-      <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/">Foto</a> de SHVETS</li>
-      <li><a href="https://www.pexels.com/photo/piglet-on-brown-grass-4813937/">Foto</a> de Brett Sayles</li>
-      <li><a href="https://www.pexels.com/photo/a-cute-calf-in-the-farmland-8024491/">Foto</a> de Tuğba Altunbaş</li>
-      <li><a href="https://www.pexels.com/photo/close-up-photo-of-a-yellow-chick-on-the-grass-7440694/">Foto</a> de CRIATORIO NEVES</li>
-      <li><a href="https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/">Foto</a> de sohail nachiti</li>
-      <li><a href="https://www.pexels.com/photo/white-rabbit-on-green-grass-4001296/">Foto</a> de Satyabratasm</li>
-      <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/">Foto</a> de Ben Phillips</li>
+      <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/" target = "_blanc">Foto</a> de SHVETS</li>
+      <li><a href="https://www.pexels.com/photo/black-man-covering-mouth-with-heart-on-stick-6974947/" target = "_blanc">Photo</a> de SHVETS</li>
+      <li><a href="https://www.pexels.com/photo/piglet-on-brown-grass-4813937/" target = "_blanc">Foto</a> de Brett Sayles</li>
+      <li><a href="https://www.pexels.com/photo/a-cute-calf-in-the-farmland-8024491/" target = "_blanc">Foto</a> de Tuğba Altunbaş</li>
+      <li><a href="https://www.pexels.com/photo/close-up-photo-of-a-yellow-chick-on-the-grass-7440694/" target = "_blanc">Foto</a> de CRIATORIO NEVES</li>
+      <li><a href="https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/" target = "_blanc">Foto</a> de sohail nachiti</li>
+      <li><a href="https://www.pexels.com/photo/white-rabbit-on-green-grass-4001296/" target = "_blanc">Foto</a> de Satyabratasm</li>
+      <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/" target = "_blanc">Foto</a> de Ben Phillips</li>
   `;
 
 export {
