@@ -311,7 +311,7 @@ margin-top: 20px;
 background-color: #555555;
 color: #D9D9D9;
 font-size: large;
-padding: 10px 10vw;
+padding: 12px 10vw;
 font-style: italic;
 text-align: center;
 }
@@ -404,7 +404,6 @@ hr{
     justify-content: center;
     align-items: center;
     padding: 0 0 4px 0;
-
     text-align: center;
     font-weight: 600;
     font-size: large;
@@ -415,7 +414,6 @@ hr{
     margin: 8px;
     width: 34px;
     height: 34px;
-    
 }
 
 @media screen and (max-width: 1000px){
