@@ -54,9 +54,9 @@ let engTranslation = () => {
   $("#attributions").html(engAttributions);
 };
 
-let engQuote = `<em>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
-It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "blanc" style="color:#D9D9D9;" >Plant-Based Treaty</a>."</em><br>
-<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "blanc">Peter Kalmus</a>  <span>Climate Scientist</span>`;
+let engQuote = `<p>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
+It will also buffer food security in a time of increasing crop failures due to global heating. The world needs a <a href="https://plantbasedtreaty.org/position-papers/" target = "blanc" style="color:#D9D9D9;" >Plant-Based Treaty</a>."<br>
+<a href="https://www.usatoday.com/story/news/nation/2023/12/31/plant-based-treaty-wants-globe-to-go-vegan-to-fight-climate-change/71972312007/" target = "blanc"><strong>Peter Kalmus</strong></a>  <span>Climate Scientist</span></p>`;
 
 let engFooter = `<strong>Sources & Footnotes: </strong><br>
       <sup>1</sup> Land animals data is dated 2023, estimated at 92.2 billion yearly by: <a href="https://www.humanesociety.org/blog/more-animals-ever-922-billion-are-used-and-killed-each-year-food#:~:text=The%20most%20recent%20data%20about,the%20Food%20and%20Agriculture%20Organization." target="_blank">https://www.humanesociety.org</a>. Data originally by UN - FAO. <br>
