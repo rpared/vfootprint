@@ -51,7 +51,7 @@ $(document).ready(function () {
       select.appendChild(option);
     }
   }
-  // Call the function to populate the list
+  // Calling the function to populate the list
   populateYears();
 
   //CALCULATIONS
@@ -167,11 +167,7 @@ $(document).ready(function () {
       $("#guy").attr("src", "assets/LovingGuy2-Banner.png");
     }
 
-    //Change Dude on hero section
-    // $("#guy").attr("src", "assets/LovingGuy2-Banner.png");
-
     //Final Quote
-
     if (!finalquoteShow) {
       let finalQuote = document.createElement("div");
       if (!spanish) {

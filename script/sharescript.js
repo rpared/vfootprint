@@ -85,7 +85,10 @@ $(document).ready(function () {
   // };
 
   function downloadScreenshot(target) {
+    const scale = window.devicePixelRatio || 1; // Handle potential undefined value
     html2canvas(target, {
+      // width: 0,
+      // height: 0,
       scale: 2, // Double the resolution
     }).then((canvas) => {
       const base64image = canvas.toDataURL("image/png");
@@ -94,7 +97,6 @@ $(document).ready(function () {
       anchor.setAttribute("download", "my-vfootprint.png");
       anchor.click();
       anchor.remove();
-
       alert(
         `The photo will be stored in your Downloads Folder.
 On mobile find it with the Files app.`
