@@ -1,5 +1,5 @@
 let engTranslation = () => {
-  $(".menubtn:eq(0)").text("Suggested📽️");
+  $(".menubtn:eq(0)").text("Suggested🎥");
   $(".menubtn:eq(1)").text("Español");
   $("#h1-banner").text("Does one vegan make a difference?");
   $("#h2-banner").html(
@@ -87,7 +87,7 @@ let engAttributions = `
       `;
 
 let spaTranslation = () => {
-  $(".menubtn:eq(0)").text("📽️Sugeridos");
+  $(".menubtn:eq(0)").text("🎥Sugeridos");
   $(".menubtn:eq(1)").text("English");
   $("#h1-banner").text("Hace diferencia un individuo vegano?");
   $("#h2-banner").html(
