@@ -85,21 +85,11 @@ $(document).ready(function () {
   // };
 
   function downloadScreenshot(target) {
-    const scale = window.devicePixelRatio * 2 || 1;
-
-    // Get the dimensions of the target div
-    const targetRect = target.getBoundingClientRect();
-
-    // Create a canvas with the same dimensions as the target div
-    const canvas = document.createElement("canvas");
-    canvas.width = targetRect.width * scale;
-    canvas.height = targetRect.height * scale;
-
-    const context = canvas.getContext("2d");
-    context.scale(scale, scale);
-
+    const scale = window.devicePixelRatio || 1; // Handle potential undefined value
     html2canvas(target, {
-      canvas: canvas, // Pass the custom canvas
+      // width: 0,
+      // height: 0,
+      scale: 2, // Double the resolution
     }).then((canvas) => {
       const base64image = canvas.toDataURL("image/png");
       let anchor = document.createElement("a");
@@ -109,7 +99,7 @@ $(document).ready(function () {
       anchor.remove();
       alert(
         `The photo will be stored in your Downloads Folder.
-        On mobile find it with the Files app.`
+On mobile find it with the Files app.`
       );
     });
   }
