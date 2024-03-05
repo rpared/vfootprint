@@ -81,8 +81,6 @@ $(document).ready(function () {
   function downloadScreenshot(target) {
     const scalea = window.devicePixelRatio || 1; // Handle potential undefined value
     html2canvas(target, {
-      // width:
-      // height:
       scale: 2,
       allowTaint: true, // Handle cross-origin images
       imageTimeout: 15000, // Adjust for slow-loading images
