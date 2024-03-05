@@ -78,18 +78,21 @@ $(document).ready(function () {
   const canvasContainer = document.querySelector("#canvasContainer");
   let hasShownPopup = false;
 
-  // const getScreenshotOfElement = async (element) => {
-  //   const canvas = await html2canvas(element);
-  //   canvasContainer.innerHTML = "";
-  //   canvasContainer.appendChild(canvas);
-  // };
-
   function downloadScreenshot(target) {
-    const scale = window.devicePixelRatio || 1; // Handle potential undefined value
+    const scalea = window.devicePixelRatio || 1; // Handle potential undefined value
     html2canvas(target, {
-      // width: 0,
-      // height: 0,
-      scale: 2, // Double the resolution
+      // width:
+      // height:
+      scale: 2,
+      allowTaint: true, // Handle cross-origin images
+      imageTimeout: 15000, // Adjust for slow-loading images
+      logging: true, // Enable logging for debugging
+      removeContainer: true, // Remove the target element after rendering
+      backgroundColor: null, // Transparent background
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
+      useCORS: true, // Handle cross-origin images
+      proxy: "https://cors-anywhere.herokuapp.com/", // Proxy for cross-origin images
     }).then((canvas) => {
       const base64image = canvas.toDataURL("image/png");
       let anchor = document.createElement("a");
@@ -103,7 +106,6 @@ On mobile find it with the Files app.`
       );
     });
   }
-
   //PBT PopUp
   let pbtPopup = () => {
     let pbt = document.createElement("div");
