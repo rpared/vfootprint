@@ -197,6 +197,7 @@ sup{
     margin: 0;
     padding: 0;
     font-size: 9pt;
+    color: #bababa;
 }
 #vLabelFooter{
     display: none;
@@ -269,8 +270,9 @@ button:hover{
     box-shadow: 0px 0px 3px #000
 }
 button:active{
-    background-color: #ffffffef;
-    opacity: 0.4;
+    background-color: #ffffff;
+    opacity: 0.5;
+    box-shadow: 0px 0px 4px #000
 }
 button:focus, button:active {
     outline: none !important;
