@@ -80,6 +80,18 @@ $(document).ready(function () {
   const canvasContainer = document.querySelector("#canvasContainer");
   let hasShownPopup = false;
 
+  let facebookAppVerify = () => {
+    if (
+      navigator.userAgent.match(/FBAN|FBAV/i) ||
+      typeof FB_IAB !== "undefined" ||
+      document.documentElement.classList.contains("in-app-browser")
+    ) {
+      alert(
+        "Facebook's in-app web view has limited functionality. To download open in a browser like Chrome or Safari"
+      );
+    }
+  };
+
   function downloadScreenshot(target) {
     const scalea = window.devicePixelRatio || 1; // Handle potential undefined value
     html2canvas(target, {
@@ -164,6 +176,7 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
   // EVENT LISTENERS
 
   $("#downloadBtn").on("click", function () {
+    facebookAppVerify();
     downloadScreenshot(vLabelDiv);
     pbtPopup();
   });
