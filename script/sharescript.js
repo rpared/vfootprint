@@ -88,7 +88,7 @@ $(document).ready(function () {
     ) {
       let fbookWarning = document.createElement("div");
       console.log("fbook verify launched");
-      fbookWarning.innerHTML = `<div class="pbt-popup-container fbook"><button class="pbt-close-btn">x</button><p>Facebook's in-app web view has limited functionality. To download your V FootPrint open the website in a browser like Chrome or Safari.</p></div>`;
+      fbookWarning.innerHTML = `<div class="pbt-popup-container fbook"><button class="pbt-close-btn">x</button><p>Facebook's in-app web view has limited functionality. To download open vfootprint.com in a browser like Chrome or Safari.</p></div>`;
       fbookWarning.classList.add("pbt-popup");
 
       // Close button functionality
