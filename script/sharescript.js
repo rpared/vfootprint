@@ -89,8 +89,8 @@ $(document).ready(function () {
       let fbookWarning = document.createElement("div");
 
       fbookWarning.innerHTML = `
-                <div class="pbt-popup-container"><button class="pbt-close-btn">x</button>"Facebook's in-app web view has limited functionality. To download open in a browser like Chrome or Safari"</div>
-              `;
+                  <div class="pbt-popup-container"><button class="pbt-close-btn">x</button>"Facebook's in-app web view has limited functionality. To download open in a browser like Chrome or Safari"</div>
+                `;
       fbookWarning.classList.add("pbt-popup");
 
       // Close button functionality
