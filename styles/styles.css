@@ -400,6 +400,14 @@ hr{
   .pbt-popup-container{
     position: relative;
   }
+  .fbook{
+    background-color:#fff;
+    max-width: 280px;
+    border-radius: 10px;
+  }
+  .fbook p{
+    padding: 10px 40px 0 12px;
+  }
 
 .pbt-close-btn{
     position: absolute;
