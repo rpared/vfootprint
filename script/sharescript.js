@@ -1,3 +1,5 @@
+// import { spanish } from "./script.js";
+
 $(document).ready(function () {
   //Attempts to share the image directly in social media, it seems node.js is required to share a dnamically created image
   //which implies a cloud server
@@ -98,10 +100,18 @@ $(document).ready(function () {
       anchor.setAttribute("download", "my-vfootprint.png");
       anchor.click();
       anchor.remove();
-      alert(
-        `The photo will be stored in your Downloads Folder.
-On mobile find it with the Files app.`
-      );
+
+      if (!spaLanguage) {
+        alert(
+          `The photo will be stored in your Downloads Folder.
+On mobile find it with the Files app in Downloads or Chrome folder.`
+        );
+      } else if (spaLanguage) {
+        alert(
+          `La foto se guardará en la carpeta de Descargas.
+En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome.`
+        );
+      }
     });
   }
   //PBT PopUp
@@ -142,6 +152,14 @@ On mobile find it with the Files app.`
       document.body.appendChild(pbt); // Append the element to the body
     }
   };
+  let spaLanguage = false;
+  let toggleSpanishDumbRepeatedFunction = () => {
+    if (spaLanguage == false) {
+      spaLanguage = true;
+    } else {
+      spaLanguage = false;
+    }
+  };
 
   // EVENT LISTENERS
 
@@ -149,6 +167,7 @@ On mobile find it with the Files app.`
     downloadScreenshot(vLabelDiv);
     pbtPopup();
   });
+  $(".menubtn:eq(1)").on("click", toggleSpanishDumbRepeatedFunction);
   // $("#instagramBtn").on("click", function () {
   //   getScreenshotOfElement(vLabelDiv);
   // });

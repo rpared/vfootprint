@@ -5,6 +5,8 @@ import {
   spaQuote,
 } from "./translations.js";
 
+let spanish = false;
+
 $(document).ready(function () {
   function populateDays() {
     const select = document.getElementById("dayList");
@@ -217,7 +219,7 @@ $(document).ready(function () {
   };
 
   // ESPAÑOL - ENGLISH
-  let spanish = false;
+
   let toggleSpanish = () => {
     if (spanish == false) {
       spanish = true;
@@ -252,3 +254,5 @@ $(document).ready(function () {
   $("#vLabelPicSelect").on("change", changePic);
   $("footer button").on("click", toggleAttributions);
 });
+
+export { spanish };
