@@ -86,9 +86,29 @@ $(document).ready(function () {
       typeof FB_IAB !== "undefined" ||
       document.documentElement.classList.contains("in-app-browser")
     ) {
-      alert(
-        "Facebook's in-app web view has limited functionality. To download open in a browser like Chrome or Safari"
-      );
+      let fbookWarning = document.createElement("div");
+
+      fbookWarning.innerHTML = `
+                <div class="pbt-popup-container"><button class="pbt-close-btn">x</button>"Facebook's in-app web view has limited functionality. To download open in a browser like Chrome or Safari"</div>
+              `;
+      fbookWarning.classList.add("pbt-popup");
+
+      // Close button functionality
+      pbt
+        .querySelector(".pbt-close-btn")
+        .addEventListener("click", function () {
+          document.body.removeChild(fbookWarning);
+        });
+
+      // Detect all clicks on the document
+      document.addEventListener("click", function (event) {
+        // If user clicks inside the element, do nothing
+        if (event.target.closest(".pbt-popup-container")) return;
+        // If user clicks outside the element, hide it!
+        document.body.removeChild(fbookWarning);
+      });
+
+      document.body.appendChild(fbookWarning); // Append the element to the body
     }
   };
 
