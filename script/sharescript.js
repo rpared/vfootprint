@@ -84,11 +84,17 @@ $(document).ready(function () {
     if (
       navigator.userAgent.match(/FBAN|FBAV/i) ||
       typeof FB_IAB !== "undefined" ||
-      document.documentElement.classList.contains("in-app-browser")
+      document.documentElement.classList.contains("in-app-browser") ||
+      /Instagram/.test(navigator.userAgent) ||
+      typeof window.__instagramWebview !== "undefined" ||
+      /LinkedIn/.test(navigator.userAgent) ||
+      typeof window._linkedin_data_partner_id !== "undefined" ||
+      /Twitter/.test(navigator.userAgent) ||
+      typeof window.__twitterIntentFactory !== "undefined"
     ) {
       let fbookWarning = document.createElement("div");
       console.log("fbook verify launched");
-      fbookWarning.innerHTML = `<div class="pbt-popup-container fbook"><button class="pbt-close-btn">x</button><p>Facebook's in-app web view has limited functionality. To download open vfootprint.com in a browser like Chrome or Safari.</p></div>`;
+      fbookWarning.innerHTML = `<div class="pbt-popup-container fbook"><button class="pbt-close-btn">x</button><p>This in-app browser has limited functionality. To download open vfootprint.com in a web browser like Chrome or Safari.</p></div>`;
       fbookWarning.classList.add("pbt-popup");
 
       // Close button functionality
