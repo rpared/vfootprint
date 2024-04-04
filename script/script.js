@@ -95,11 +95,11 @@ $(document).ready(function () {
       vLabelHeader.innerHTML =
         "Every day " + $("#name-field").val() + " saves:";
     } else if (
-      $("#name-field").val() === null ||
-      ($("#name-field").val() === "" &&
-        $("#dayList").val() == 1 &&
-        $("#monthList").val() == 0 &&
-        $("#yearList").val() == 0)
+      !spanish &&
+      ($("#name-field").val() === null || $("#name-field").val() === "") &&
+      $("#dayList").val() == 1 &&
+      $("#monthList").val() == 0 &&
+      $("#yearList").val() == 0
     ) {
       vLabelHeader.innerHTML = "Every day I save:";
     }
@@ -114,11 +114,11 @@ $(document).ready(function () {
       vLabelHeader.innerHTML =
         "Cada día " + $("#name-field").val() + " salva/ahorra:";
     } else if (
-      $("#name-field").val() === null ||
-      ($("#name-field").val() === "" &&
-        $("#dayList").val() == 1 &&
-        $("#monthList").val() == 0 &&
-        $("#yearList").val() == 0)
+      spanish &&
+      ($("#name-field").val() === null || $("#name-field").val() === "") &&
+      $("#dayList").val() == 1 &&
+      $("#monthList").val() == 0 &&
+      $("#yearList").val() == 0
     ) {
       vLabelHeader.innerHTML = "Cada día salvo/ahorro:";
     }
