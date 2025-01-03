@@ -218,6 +218,11 @@ $(document).ready(function () {
     }
   };
 
+  // Footer year
+  let currentYear = new Date().getFullYear();
+  document.querySelector("#year").innerHTML = currentYear;
+
+
   // ESPAÑOL - ENGLISH
 
   let toggleSpanish = () => {
