@@ -197,11 +197,18 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
     }
   };
 
+  function trackButtonClick(buttonName) {
+    gtag('event', 'click', {
+      'event_category': 'Button',
+      'event_label': buttonName
+    });
+  }
   // EVENT LISTENERS
 
   $("#downloadBtn").on("click", function () {
     facebookAppVerify();
     downloadScreenshot(vLabelDiv);
+    trackButtonClick('Download_Screenshot_Button');
     pbtPopup();
   });
   $(".menubtn:eq(1)").on("click", toggleSpanishDumbRepeatedFunction);
