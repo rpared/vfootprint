@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /script/
+Disallow: /styles/
+Disallow: /assets/
+
+Sitemap: https://vfootprint.com/sitemap.xml
