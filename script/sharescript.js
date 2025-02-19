@@ -205,7 +205,7 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
     console.log('trackButtonClick called with:', buttonName);
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'event': 'button_click',
+      'event': 'download_screenshot_button_click',
       'event_category': 'Button',
       'event_label': buttonName
     });
