@@ -166,25 +166,29 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
     };
 
     function pbtDisplayPopup() {
-      console.log("popup triggerred");
-
+      console.log("popup triggered");
+    
       hasShownPopup = true;
       console.log(hasShownPopup);
       // Close button functionality
       pbt
         .querySelector(".pbt-close-btn")
         .addEventListener("click", function () {
-          document.body.removeChild(pbt);
+          if (document.body.contains(pbt)) {
+            document.body.removeChild(pbt);
+          }
         });
-
+    
       // Detect all clicks on the document
       document.addEventListener("click", function (event) {
         // If user clicks inside the element, do nothing
         if (event.target.closest(".pbt-popup-container")) return;
         // If user clicks outside the element, hide it!
-        document.body.removeChild(pbt);
+        if (document.body.contains(pbt)) {
+          document.body.removeChild(pbt);
+        }
       });
-
+    
       document.body.appendChild(pbt); // Append the element to the body
     }
   };
@@ -207,13 +211,13 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
     });
     console.log('Event pushed to dataLayer');
   }
-  
+
   // EVENT LISTENERS
 
   $("#downloadBtn").on("click", function () {
     facebookAppVerify();
     downloadScreenshot(vLabelDiv);
-    trackButtonClick('Download_Screenshot_Button');
+    trackButtonClick('download_screenshot_button');
     pbtPopup();
   });
   $(".menubtn:eq(1)").on("click", toggleSpanishDumbRepeatedFunction);
