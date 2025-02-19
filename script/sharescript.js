@@ -198,11 +198,16 @@ En móvil puede encontrarse con la app Files en Descargas o la carpeta de Chrome
   };
 
   function trackButtonClick(buttonName) {
-    gtag('event', 'click', {
+    console.log('trackButtonClick called with:', buttonName);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'button_click',
       'event_category': 'Button',
       'event_label': buttonName
     });
+    console.log('Event pushed to dataLayer');
   }
+  
   // EVENT LISTENERS
 
   $("#downloadBtn").on("click", function () {
