@@ -1,6 +1,8 @@
 let engTranslation = () => {
-  $(".menubtn:eq(0)").text("Suggested🎥");
-  $(".menubtn:eq(1)").text("Español");
+  $("h1.maintitle").text("Vegan Footprint Calculator");
+  $(".menubtn:eq(0)").text("About");
+  $(".menubtn:eq(1)").text("Suggested🎬");
+  $(".menubtn:eq(2)").text("Español");
   $("#h1-banner").text("Does one vegan make a difference?");
   $("#h2-banner").html(
     `Calculate how much you have saved or would save as a vegan and <strong>share it</strong>`
@@ -48,6 +50,7 @@ let engTranslation = () => {
   $("#vLabelPicSelect option:eq(5)").text("Fish");
   $("#sharePanel p:eq(1)").text("Download a photo your VFootprint:");
   $(".final-quote").html(engQuote);
+  $("article").html(engArticle);
   $(".external-links p").text("Check these out:");
   $("footer div:eq(0)").html(engFooter);
   $("footer button").html("<strong>Image Attribution ↓</strong>");
@@ -85,10 +88,25 @@ let engAttributions = `
         <hr>
         <a href="https://roger.costra.ec" target="_blank">- © Roger Paredes 2024 -</a>
       `;
+let engArticle = `
+      <h2>How much does a vegan save per day?</h2>
+          Numbers vary significantly depending on the country the size and diet of the individual. The following estimates are an average of the world's consumption. On average, a vegan saves per day:
+          <ul>
+            <li>0.03 Land Animals<sup>1</sup></li>
+            <li>0.15 Lbs. of Sea Animals<sup>2</sup></li>
+            <li>20 Lbs. of C02<sup>3</sup></li>
+            <li>1100 Lts. of water<sup>3</sup></li>
+            <li>45 Lbs. of grains<sup>3</sup></li>
+          </ul>
+          Sources are listed at the bottom of the page.
+          <br />
+      `;
 
 let spaTranslation = () => {
-  $(".menubtn:eq(0)").text("🎥Sugeridos");
-  $(".menubtn:eq(1)").text("English");
+  $("h1.maintitle").text("Calculadora de Huella Vegana");
+  $(".menubtn:eq(0)").text("Acerca");
+  $(".menubtn:eq(1)").text("🎬Sugeridos");
+  $(".menubtn:eq(2)").text("English");
   $("#h1-banner").text("Hace diferencia un individuo vegano?");
   $("#h2-banner").html(
     `Calcula cuánto salvas o cuánto ahorrarías siendo vegan@ y <strong>compártelo.</strong>`
@@ -131,6 +149,7 @@ let spaTranslation = () => {
   $("#vLabelPicSelect option:eq(5)").text("Pez");
   $("#sharePanel p:eq(1)").text("Descarga una foto de tu VFootprint:");
   $(".final-quote").html(spaQuote);
+  $("article").html(espArticle);
   $(".external-links p").text("Revisa estos proyectos:");
   $("footer div:eq(0)").html(spaFooter);
   $("footer button").html("<strong>Atribución de Imágenes ↓</strong>");
@@ -163,6 +182,19 @@ let spaAttributions = `
       <li><a href="https://www.pexels.com/photo/close-up-photography-of-leaves-with-droplets-807598/" target = "_blanc">Foto</a> de sohail nachiti</li>
       <li><a href="https://www.pexels.com/photo/white-rabbit-on-green-grass-4001296/" target = "_blanc">Foto</a> de Satyabratasm</li>
       <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/" target = "_blanc">Foto</a> de Ben Phillips</li>
+  `;
+  let espArticle = `
+      <h2>¿Cuánto ahorra un vegano por día?</h2>
+          Los números varían significativamente dependiendo del país, el tamaño y la dieta del individuo. Las siguientes estimaciones son un promedio del consumo mundial. En promedio, un vegano ahorra por día:
+          <ul>
+            <li>0.03 Animales terrestres<sup>1</sup></li>
+            <li>0.15 Lbs. de animales marinos<sup>2</sup></li>
+            <li>20 Lbs. de CO₂<sup>3</sup></li>
+            <li>1100 Lts. de agua<sup>3</sup></li>
+            <li>45 Lbs. de granos<sup>3</sup></li>
+          </ul>
+          Las fuentes están listadas al final de la página.
+          <br />
   `;
 
 export {

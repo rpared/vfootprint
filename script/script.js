@@ -251,7 +251,7 @@ $(document).ready(function () {
   };
 
   // EVENT LISTENERS
-  $(".menubtn:eq(1)").on("click", toggleSpanish);
+  $(".menubtn:eq(2)").on("click", toggleSpanish);
   $("#name-field").on("change", addFirstName);
   $("#dayList").on("change", calculateVFootprint);
   $("#monthList").on("change", calculateVFootprint);
