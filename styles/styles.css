@@ -98,6 +98,19 @@ a.menubtn:hover{
     box-shadow: 0px 0px 5px #000 inset, 0px 2px 2px #000 inset;
 }
 
+h3{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #474747;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 10px;
+    /* background-color:#7EB85A; */
+    max-width: 700px;
+
+}
+
 
 /* INPUT PANEL */
 #input-panelcontainer{
@@ -302,7 +315,7 @@ button:focus, button:active {
 /* ARTICLE */
 article{
     margin: 20px auto;
-    padding: 6px 18px ;
+    padding: 8px 18px ;
     max-width: 620px;
     border-radius: 11px;
     text-align: left;
