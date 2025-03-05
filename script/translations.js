@@ -7,7 +7,7 @@ let engTranslation = () => {
   $("#h2-banner").html(
     `Calculate how much you have saved or would save as a vegan and <strong>share it</strong>`
   );
-  $(".input-side p:eq(0)").text("Your first name:");
+  $("h3").html("After you calculate your estimated footprint you can <strong>download</strong> a cute image formatted to share on social media.");
   $("#name-field").attr("placeholder", "Optional");
   $(".input-side p:eq(1)").text("How long have you been vegan?");
   $(".input-side label:eq(0)").text("Days");
@@ -111,6 +111,7 @@ let spaTranslation = () => {
   $("#h2-banner").html(
     `Calcula cuánto salvas o cuánto ahorrarías siendo vegan@ y <strong>compártelo.</strong>`
   );
+  $("h3").html("Después de calcular tu huella estimada puedes <strong>descargar</strong> una adorable imagen para compartir en redes sociales.");
   $(".input-side p:eq(0)").text("Tu primer nombre:");
   $("#name-field").attr("placeholder", "Opcional");
   $(".input-side p:eq(1)").text("¿Cuánto tiempo has sido vegan@?");
