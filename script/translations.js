@@ -53,8 +53,10 @@ let engTranslation = () => {
   $("article").html(engArticle);
   $(".external-links p").text("Check these out:");
   $("footer div:eq(0)").html(engFooter);
-  $("footer button").html("<strong>Image Attribution ↓</strong>");
+  $("#att-btn").html("<strong>Image Attribution ↓</strong>");
+  $("#priv-btn").html("<strong>Privacy ↓</strong>");
   $("#attributions").html(engAttributions);
+  $("#privacy").html(engPrivacy);
 };
 
 let engQuote = `<p>"Rapidly reducing animal agriculture and shifting humanity to a<strong> plant-based diet</strong> is one of the best, easiest, and fastest things we can do to save the planet...
@@ -98,7 +100,10 @@ let engArticle = `
             <li>1100 Lts. of water<sup>3</sup></li>
             <li>45 Lbs. of grains<sup>3</sup></li>
           </ul>
+          <p>
+          There are no biases, by choosing a plant-based diet, individuals contribute to environmental sustainability and animal welfare daily.
           Sources are listed at the bottom of the page.
+          </p>
           <br />
       `;
 
@@ -153,8 +158,10 @@ let spaTranslation = () => {
   $("article").html(espArticle);
   $(".external-links p").text("Revisa estos proyectos:");
   $("footer div:eq(0)").html(spaFooter);
-  $("footer button").html("<strong>Atribución de Imágenes ↓</strong>");
+  $("#att-btn").html("<strong>Atribución de Imágenes ↓</strong>");
+  $("#priv-btn").html("<strong>Privacidad ↓</strong>");
   $("#attributions").html(spaAttributions);
+  $("#privacy").html(spaPrivacy);
 };
 
 let spaQuote = `<p>"Reducir rápidamente la agricultura animal y cambiar a la humanidad a una <strong>dieta basada en plantas</strong> es una de las mejores, más fáciles y más rápidas cosas que podemos hacer para salvar el planeta... También amortiguará la seguridad alimentaria en una época de aumento de pérdidas de cosechas debido al calentamiento global. El mundo necesita un <a href="https://plantbasedtreaty.org/position-papers/" target = "_blanc" style="color:#D9D9D9;">Tratado Basado en Plantas</a>."<br>
@@ -175,8 +182,9 @@ let spaFooter = `
       <hr>
       `;
 let spaAttributions = `
+<br>
       <li><a href="https://www.pexels.com/photo/uncertain-black-man-in-hoodie-in-studio-6974936/" target = "_blanc">Foto</a> de SHVETS</li>
-      <li><a href="https://www.pexels.com/photo/black-man-covering-mouth-with-heart-on-stick-6974947/" target = "_blanc">Photo</a> de SHVETS</li>
+      <li><a href="https://www.pexels.com/photo/black-man-covering-mouth-with-heart-on-stick-6974947/" target = "_blanc">Foto</a> de SHVETS</li>
       <li><a href="https://www.pexels.com/photo/piglet-on-brown-grass-4813937/" target = "_blanc">Foto</a> de Brett Sayles</li>
       <li><a href="https://www.pexels.com/photo/a-cute-calf-in-the-farmland-8024491/" target = "_blanc">Foto</a> de Tuğba Altunbaş</li>
       <li><a href="https://www.pexels.com/photo/close-up-photo-of-a-yellow-chick-on-the-grass-7440694/" target = "_blanc">Foto</a> de CRIATORIO NEVES</li>
@@ -197,6 +205,77 @@ let spaAttributions = `
           Las fuentes están listadas al final de la página.
           <br />
   `;
+  let engPrivacy = `
+  <br>
+   Effective Date: March 19, 2025 <br>
+  This Privacy Policy explains how vfootprint.com collects, uses, and protects your information when you visit the website.
+  <br>
+  1. Information Collected
+  Personal information is not collected directly. However, Google Analytics are used to gather anonymous data about website traffic and user behavior.
+  Google Analytics may collect information such as:
+  Your IP address (anonymized where applicable)
+  Browser type and device information
+  Pages visited and time spent on the site
+  Referring websites and links clicked
+  <br>
+  2. How This Information Is Used
+  The data collected via Google Analytics helps to:
+  Understand website traffic and improve user experience
+  Monitor and analyze website performance
+  Identify trends and enhance content
+  <br>
+  3. Cookies and Tracking Technologies
+  Google Analytics uses cookies to track interactions on this site. You can manage or disable cookies through your browser settings. To opt out of Google Analytics tracking, you can install the Google Analytics Opt-out Browser Add-on: https://tools.google.com/dlpage/gaoptout.
+  <br>
+  4. Third-Party Sharing
+  We do not sell, trade, or share your personal data. However, Google may process the collected data under its own privacy policies. Learn more here: https://policies.google.com/privacy.
+  <br>
+  5. Your Rights & Choices
+  You can disable cookies in your browser settings.
+  You can opt out of Google Analytics tracking as described above.
+  <br>
+  6. Updates to This Privacy Policy
+  This policy may be updated from time to time. Changes will be posted on this page with an updated Effective Date.
+  <br>
+  7. Contact
+  If you have any questions about this Privacy Policy, please contact at paredes.roger@gmail.com.
+  `;
+  let spaPrivacy = `
+  <br>
+   Fecha de Vigencia: 19 de marzo de 2025 <br>
+  Esta Política de Privacidad explica cómo vfootprint.com recopila, utiliza y protege su información cuando visita el sitio web.
+  <br>
+  1. Información Recopilada
+  No se recopila información personal directamente. Sin embargo, se utiliza Google Analytics para recopilar datos anónimos sobre el tráfico del sitio web y el comportamiento de los usuarios.
+  Google Analytics puede recopilar información como:
+  Su dirección IP (anonimizada cuando sea aplicable)
+  Tipo de navegador e información del dispositivo
+  Páginas visitadas y tiempo pasado en el sitio
+  Sitios web de referencia y enlaces clicados
+  <br>
+  2. Cómo Se Utiliza Esta Información
+  Los datos recopilados a través de Google Analytics ayudan a:
+  Comprender el tráfico del sitio web y mejorar la experiencia del usuario
+  Monitorear y analizar el rendimiento del sitio web
+  Identificar tendencias y mejorar el contenido
+  <br>
+  3. Cookies y Tecnologías de Seguimiento
+  Google Analytics utiliza cookies para rastrear interacciones en este sitio. Puede gestionar o desactivar las cookies a través de la configuración de su navegador. Para optar por no participar en el seguimiento de Google Analytics, puede instalar el complemento de inhabilitación para navegadores de Google Analytics: https://tools.google.com/dlpage/gaoptout.
+  <br>
+  4. Compartir con Terceros
+  No vendemos, intercambiamos ni compartimos sus datos personales. Sin embargo, Google puede procesar los datos recopilados bajo sus propias políticas de privacidad. Obtenga más información aquí: https://policies.google.com/privacy.
+  <br>
+  5. Sus Derechos y Opciones
+  Puede desactivar las cookies en la configuración de su navegador.
+  Puede optar por no participar en el seguimiento de Google Analytics como se describe anteriormente.
+  <br>
+  6. Actualizaciones de Esta Política de Privacidad
+  Esta política puede actualizarse de vez en cuando. Los cambios se publicarán en esta página con una Fecha de Vigencia actualizada.
+  <br>
+  7. Contacto
+  Si tiene alguna pregunta sobre esta Política de Privacidad, por favor contacte a paredes.roger@gmail.com.
+  `;
+  
 
 export {
   spaTranslation,
@@ -207,4 +286,6 @@ export {
   spaFooter,
   spaAttributions,
   engAttributions,
+  spaPrivacy,
+  engPrivacy,
 };

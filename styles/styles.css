@@ -245,6 +245,14 @@ sup{
 #vLabelPic{
     max-width: 530px;
 }
+.hint{
+    text-align: center;
+    font-style: italic;
+    color: #474747;}
+
+  article ul{
+    margin-top: 10px;
+  }
 
 /*SHARE PANEL*/
 section#sharePanelContainer{
@@ -335,9 +343,10 @@ article h2{
     padding: 0;
 }
 .external-links img{
-    padding: 16px;
+    padding: 18px;
     filter: grayscale();
-    max-height: 150px;
+    max-height: 130px;
+    max-width: 280px;
 }
 
 .external-links img.aja{
@@ -413,13 +422,15 @@ footer li, footer ul{
 footer button{
     color: #6D6D6D;
     display: block;
-    margin: -10px auto;
+    border-radius: 10px;
+    margin: -5px auto;
 }
 hr{
     margin: 20px;
 }
-#attributions{
+#attributions, #privacy{
     margin-top: 10px;
+    margin-bottom: 20px;
     display: none;
 }
 
@@ -478,12 +489,18 @@ hr{
     #h1-banner{
         font-size: 2.6em;
     }
+    #banner-title{
+        margin-right: 10px;
+    }
     #guy{
         margin-left: -15%;
     }
+    /* #hero-content{
+        padding-right: 20px;
+    } */
     #hero-text{
-        margin-left: -20%;
-        margin-right: 50px;
+        margin-left: -24%;
+        margin-right: 60px;
     }
     #navbar-ul li{
     padding-top: 5px !important;
@@ -500,14 +517,20 @@ hr{
         border-bottom: 3px solid #D9D9D9;
     }
     #h1-banner{
-        font-size: 1.7em;
+        font-size: 1.5em;
+    }
+    #banner-title{
+        font-size: 2.5em;
     }
     #h2-banner{
-        font-size: 1.2em;
+        font-size: 1em;
     }
     #hero-banner{
         max-height: 240px;
         }
+    #hero-content{
+        align-items: flex-end;
+    }
     #hero-text{
         margin-top: 24px;
         margin-left: -10%;
@@ -539,7 +562,7 @@ hr{
         margin-left: -15%;
     }
     #h1-banner{
-            font-size: 1.6em;
+            font-size: 1.5em;
         }
     #h2-banner{
             font-size: 1em;
@@ -627,18 +650,23 @@ hr{
     
 
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 
     #hero-text{
         margin-top: 18px;
         margin-left: -20%;
+        margin-right: 20px;
         max-width: 180px;
     }
+    
     #h1-banner{
         font-size: 1.5em;
     }
     #h2-banner{
         font-size: 12pt;
+    }
+    #banner-title{
+        font-size: 1.6em;
     }
     .input-side div{
         display: grid;

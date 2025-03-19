@@ -204,17 +204,34 @@ $(document).ready(function () {
   let toggleAttributions = () => {
     if (!spanish) {
       $("#attributions").toggle("style", "display: inline");
-      const buttonText = $("#attributions").is(":visible")
+      const buttonAttText = $("#attributions").is(":visible")
         ? "<strong>Image Attribution ↑</strong>"
         : "<strong>Image Attribution ↓</strong>";
-      $("footer button").html(buttonText);
+        $("att-btn").html(buttonAttText);
     }
     if (spanish) {
       $("#attributions").toggle("style", "display: inline");
-      const buttonText = $("#attributions").is(":visible")
+      const buttonAttText = $("#attributions").is(":visible")
         ? "<strong>Atribución de Imágenes ↑</strong>"
         : "<strong>Atribución de Imágenes ↓</strong>";
-      $("footer button").html(buttonText);
+      $("att-btn").html(buttonAttText);
+    }
+  };
+
+  let togglePrivacy = () => {
+    if (!spanish) {
+      $("#privacy").toggle("style", "display: inline");
+      const buttonPrivText = $("#privacy").is(":visible")
+        ? "<strong>Image Privacy ↑</strong>"
+        : "<strong>Image Privacy ↓</strong>";
+      $("priv-btn").html(buttonPrivText);
+    }
+    if (spanish) {
+      $("#privacy").toggle("style", "display: inline");
+      const buttonPrivText = $("#privacy").is(":visible")
+        ? "<strong>Privacidad ↑</strong>"
+        : "<strong>Privacidad ↓</strong>";
+      $("priv-btn").html(buttonPrivText);
     }
   };
 
@@ -257,7 +274,8 @@ $(document).ready(function () {
   $("#monthList").on("change", calculateVFootprint);
   $("#yearList").on("change", calculateVFootprint);
   $("#vLabelPicSelect").on("change", changePic);
-  $("footer button").on("click", toggleAttributions);
+  $("#att-btn").on("click", toggleAttributions);
+  $("#priv-btn").on("click", togglePrivacy);
 });
 
 export { spanish };
