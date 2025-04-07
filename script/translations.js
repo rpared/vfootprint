@@ -92,19 +92,25 @@ let engAttributions = `
       `;
 let engArticle = `
       <h2>How much does a vegan save per day?</h2>
-          Numbers vary significantly depending on the country the size and diet of the individual. The following estimates are an average of the world's consumption. On average, a vegan saves per day:
-          <ul>
-            <li>0.03 Land Animals<sup>1</sup></li>
-            <li>0.15 Lbs. of Sea Animals<sup>2</sup></li>
-            <li>20 Lbs. of C02<sup>3</sup></li>
-            <li>1100 Lts. of water<sup>3</sup></li>
-            <li>45 Lbs. of grains<sup>3</sup></li>
-          </ul>
           <p>
-          There are no biases, by choosing a plant-based diet, individuals contribute to environmental sustainability and animal welfare daily.
-          Sources are listed at the bottom of the page.
-          </p>
-          <br />
+        Numbers vary significantly depending on the country, the size and diet of the individual. The V Footprint vegan footprint calculator uses average estimates of the world's consumption avoiding aproximations or inflated numbers. Using data from several sources, Our World in Data (animal consumption), Worldometer (human population), and Cowspiracy (environmental estimates), the following daily savings are observed for an average vegan:
+        </p>
+        <ul>
+          <li><strong>0.03</strong> <div>Land Animals<sup>1</sup></div></li>
+          <li><strong>0.15 </strong> <div> Lbs. of Sea Animals<sup>2</sup></div></li>
+          <li><strong>20 </strong> <div> Lbs. of C02<sup>3</sup></div></li>
+          <li><strong>1100 </strong> <div> Lts. of water<sup>3</sup></div></li>
+          <li><strong>45 </strong> <div> Lbs. of grains<sup>3</sup></div></li>
+          <li><strong>∞</strong> <div>Suffering</div></li>
+        </ul>
+        <p>
+        There are no biases, by choosing a plant-based diet, individuals contribute to environmental sustainability and animal welfare daily.
+        <br /><br />
+
+        <small>Sources are listed at the bottom of the page.</small>
+            <br />
+      </p>
+          
       `;
 
 let spaTranslation = () => {
@@ -193,18 +199,25 @@ let spaAttributions = `
       <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/" target = "_blanc">Foto</a> de Ben Phillips</li>
   `;
   let espArticle = `
-      <h2>¿Cuánto ahorra un vegano por día?</h2>
+      <h2>¿Cuánto ahorra un vegano al día?</h2>
+          <p>
           Los números varían significativamente dependiendo del país, el tamaño y la dieta del individuo. Las siguientes estimaciones son un promedio del consumo mundial. En promedio, un vegano ahorra por día:
-          <ul>
-            <li>0.03 Animales terrestres<sup>1</sup></li>
-            <li>0.15 Lbs. de animales marinos<sup>2</sup></li>
-            <li>20 Lbs. de CO₂<sup>3</sup></li>
-            <li>1100 Lts. de agua<sup>3</sup></li>
-            <li>45 Lbs. de granos<sup>3</sup></li>
-          </ul>
-          Las fuentes están listadas al final de la página.
-          <br />
-  `;
+        </p>
+        <ul>
+          <li><strong>0.03</strong> <div>Animales terrestres<sup>1</sup></div></li>
+          <li><strong>0.15 </strong> <div> Lbs. de animales marinos<sup>2</sup></div></li>
+          <li><strong>20 </strong> <div> Lbs. de C02<sup>3</sup></div></li>
+          <li><strong>1100 </strong> <div> Lts. de agua<sup>3</sup></div></li>
+          <li><strong>45 </strong> <div> Lbs. de granos<sup>3</sup></div></li>
+          <li><strong>∞</strong> <div>Sufrimiento</div></li>
+        </ul>
+        <p>
+        Al elegir una dieta basada en plantas, los individuos contribuyen a la sostenibilidad ambiental y al bienestar animal diariamente.    <br /><br />
+
+        <small>Las fuentes están listadas al final de la página.</small>
+            <br />
+          </p>
+      `;
   let engPrivacy = `
   <br>
    Effective Date: March 19, 2025 <br>
