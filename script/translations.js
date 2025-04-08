@@ -8,6 +8,7 @@ let engTranslation = () => {
     `Calculate how much you have saved or would save as a vegan and <strong>share it</strong>`
   );
   $("h3").html("After you calculate your estimated footprint you can <strong>download</strong> a cute image formatted to share on social media.");
+  $(".input-side p:eq(0)").text("Your first name:");
   $("#name-field").attr("placeholder", "Optional");
   $(".input-side p:eq(1)").text("How long have you been vegan?");
   $(".input-side label:eq(0)").text("Days");
@@ -15,7 +16,7 @@ let engTranslation = () => {
   $(".input-side label:eq(2)").text("Years");
   $("#vLabelHeader").text("Until now I have saved:");
   $("#vLabeltext p:eq(0) span").text("Land Animals");
-  $("#vLabeltext p:eq(1) span").text("Lbs. de animales marinos");
+  $("#vLabeltext p:eq(1) span").text("Lbs. of Sea Animals");
   $("#vLabeltext p:eq(2) span").text("Lbs. of CO₂");
   $("#vLabeltext p:eq(3) span").text("Lts. of water");
   $("#vLabeltext p:eq(4) span").text("Lbs. of grains");
@@ -48,7 +49,7 @@ let engTranslation = () => {
   $("#vLabelPicSelect option:eq(3)").text("Bunny");
   $("#vLabelPicSelect option:eq(4)").text("Chick");
   $("#vLabelPicSelect option:eq(5)").text("Fish");
-  $("#sharePanel p:eq(1)").text("Download a photo your VFootprint:");
+  $("#sharePanel p:eq(1)").text("Download a photo your V Footprint:");
   $(".final-quote").html(engQuote);
   $("article").html(engArticle);
   $(".external-links p").text("Check these out:");
@@ -159,7 +160,7 @@ let spaTranslation = () => {
   $("#vLabelPicSelect option:eq(3)").text("Conejito");
   $("#vLabelPicSelect option:eq(4)").text("Pollito");
   $("#vLabelPicSelect option:eq(5)").text("Pez");
-  $("#sharePanel p:eq(1)").text("Descarga una foto de tu VFootprint:");
+  $("#sharePanel p:eq(1)").text("Descarga una foto de tu V Footprint:");
   $(".final-quote").html(spaQuote);
   $("article").html(espArticle);
   $(".external-links p").text("Revisa estos proyectos:");
@@ -199,7 +200,7 @@ let spaAttributions = `
       <li><a href="https://www.pexels.com/photo/clown-fish-on-white-corals-4781926/" target = "_blanc">Foto</a> de Ben Phillips</li>
   `;
   let espArticle = `
-      <h2>¿Cuánto ahorra un vegano al día?</h2>
+      <h2>¿Cuánto ahorra un vegan@ al día?</h2>
           <p>
           Los números varían significativamente dependiendo del país, el tamaño y la dieta del individuo. Las siguientes estimaciones son un promedio del consumo mundial. En promedio, un vegano ahorra por día:
         </p>
