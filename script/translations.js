@@ -3,7 +3,7 @@ let engTranslation = () => {
   $(".menubtn:eq(0)").text("About");
   $(".menubtn:eq(1)").text("Suggested🎬");
   $(".menubtn:eq(2)").text("Español");
-  $("#h1-banner").text("Does one vegan make a difference?");
+  $("#banner-title").text("Does one vegan make a difference?");
   $("#h2-banner").html(
     `Calculate how much you have saved or would save as a vegan and <strong>share it</strong>`
   );
@@ -119,7 +119,7 @@ let spaTranslation = () => {
   $(".menubtn:eq(0)").text("Acerca");
   $(".menubtn:eq(1)").text("🎬Sugeridos");
   $(".menubtn:eq(2)").text("English");
-  $("#h1-banner").text("Hace diferencia un individuo vegano?");
+  $("#banner-title").text("Hace diferencia un individuo vegano?");
   $("#h2-banner").html(
     `Calcula cuánto salvas o cuánto ahorrarías siendo vegan@ y <strong>compártelo.</strong>`
   );
