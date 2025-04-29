@@ -117,7 +117,9 @@ let engArticle = `
 let spaTranslation = () => {
   $("h1.maintitle").text("Calculadora de Huella Vegana");
   $(".menubtn:eq(0)").text("Acerca");
+  $(".menubtn:eq(1)").html("<span>Test Link</span>");
   $(".menubtn:eq(1)").text("🎬Sugeridos");
+  $(".menubtn:eq(1)").attr("href", "videossugeridos.html?lang=spanish");
   $(".menubtn:eq(2)").text("English");
   $("#banner-title").text("Hace diferencia un individuo vegano?");
   $("#h2-banner").html(
@@ -130,7 +132,8 @@ let spaTranslation = () => {
   $(".input-side label:eq(0)").text("Días");
   $(".input-side label:eq(1)").text("Meses");
   $(".input-side label:eq(2)").text("Años");
-  $("#vLabelHeader").text("Hasta hoy he salvado/ahorrado:");
+  $("#vLabelHeader").text("Hasta hoy he salvado:");
+  $("body > main > p > small").text("Si seleccionas 1 día el titular será: Cada día yo (o tu nombre) salvo/ahorro.");
   $("#vLabeltext p:eq(0)").html(
     `<span id="landAnimals">0</span> Animales terrestres<sup>1</sup>`
   );

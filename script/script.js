@@ -242,6 +242,8 @@ $(document).ready(function () {
 
   // ESPAÑOL - ENGLISH
 
+
+
   let toggleSpanish = () => {
     if (spanish == false) {
       spanish = true;
@@ -266,6 +268,17 @@ $(document).ready(function () {
       $("#guy").attr("src", "assets/DoubtfulGuy2-Banner.png");
     }
   };
+  // Make toggleSpanish globally accessible
+  window.toggleSpanish = toggleSpanish;
+
+    // Check if the URL contains the "lang=spanish" parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("lang") === "spanish") {
+      
+      console.log("Spanish parameter found in URL.");
+      toggleSpanish();
+       // Call the function to toggle to Spanish
+    }
 
   // EVENT LISTENERS
   $(".menubtn:eq(2)").on("click", toggleSpanish);
@@ -276,6 +289,10 @@ $(document).ready(function () {
   $("#vLabelPicSelect").on("change", changePic);
   $("#att-btn").on("click", toggleAttributions);
   $("#priv-btn").on("click", togglePrivacy);
+
+
 });
+
+
 
 export { spanish };
